@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>Memotron</nom>
+  <date_creation>1/10/2022 23:13</date_creation>
+  <Elements>
+    <Action>
+      <Position>282;147</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>?</PreAssertion>
+      <PostAssertion>?</PostAssertion>
+      <Titre>Memotron</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>0</DetailsVideVisible>
+      <Enfants>
+        <Action>
+          <Position>-436;421</Position>
+          <StyleLien>1</StyleLien>
+          <PreAssertion>?</PreAssertion>
+          <PostAssertion>tailleCarre,
+tempMemorisation,
+debugMode,</PostAssertion>
+          <Titre>InitialiserLaPartie</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>0</DetailsVideVisible>
+          <Enfants/>
+        </Action>
+        <Action>
+          <Position>706;402</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>tailleCarre,
+tempMemorisation,
+debugMode,</PreAssertion>
+          <PostAssertion>?</PostAssertion>
+          <Titre>jouerLaPartie</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>1</DetailsVideVisible>
+          <Enfants>
+            <Iteration>
+              <Position>975.5;524.5</Position>
+              <StyleLien>1</StyleLien>
+              <Titre>?</Titre>
+              <IterationFixe>0</IterationFixe>
+              <Enfants>
+                <Action>
+                  <Position>131;809</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>tailleCarre</PreAssertion>
+                  <PostAssertion>chiffrePair,chiffreImpair,
+centreDuCarre,
+chiffrePLusPetit</PostAssertion>
+                  <Titre>afficherCarre</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>713;808</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>tempMemorisation</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>tempMemorisation</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>1164;806</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>chiffrePair,chiffreImpair,
+centreDuCarre,
+chiffrePLusPetit</PreAssertion>
+                  <PostAssertion>∅</PostAssertion>
+                  <Titre>poserQuestion</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Iteration>
+          </Enfants>
+        </Action>
+      </Enfants>
+    </Action>
+  </Elements>
+  <Dictionary/>
+</Algorithme>
