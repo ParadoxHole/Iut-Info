@@ -2,16 +2,16 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>parametrageMenuDemarrer</nom>
-  <date_creation>1/10/2022 22:53</date_creation>
+  <date_creation>2/10/2022 03:12</date_creation>
   <Elements>
     <Action>
-      <Position>602;100</Position>
+      <Position>654;106</Position>
       <StyleLien>2</StyleLien>
       <PreAssertion>?</PreAssertion>
       <PostAssertion>tailleCarre,
 tempMemorisation,
 debugMode,</PostAssertion>
-      <Titre>parametrageMenuDemarrer</Titre>
+      <Titre>InitialiserLaPartie</Titre>
       <DetailsVisible>1</DetailsVisible>
       <DetailsVideVisible>0</DetailsVideVisible>
       <Enfants>

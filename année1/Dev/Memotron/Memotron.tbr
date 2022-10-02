@@ -2,7 +2,7 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>Memotron</nom>
-  <date_creation>1/10/2022 23:13</date_creation>
+  <date_creation>2/10/2022 03:12</date_creation>
   <Elements>
     <Action>
       <Position>282;147</Position>
@@ -43,7 +43,7 @@ debugMode,</PreAssertion>
               <IterationFixe>0</IterationFixe>
               <Enfants>
                 <Action>
-                  <Position>131;809</Position>
+                  <Position>153;807</Position>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>tailleCarre</PreAssertion>
                   <PostAssertion>chiffrePair,chiffreImpair,
@@ -56,13 +56,62 @@ chiffrePLusPetit</PostAssertion>
                 </Action>
                 <Action>
                   <Position>713;808</Position>
-                  <StyleLien>1</StyleLien>
+                  <StyleLien>2</StyleLien>
                   <PreAssertion>tempMemorisation</PreAssertion>
                   <PostAssertion>?</PostAssertion>
                   <Titre>tempMemorisation</Titre>
                   <DetailsVisible>1</DetailsVisible>
                   <DetailsVideVisible>0</DetailsVideVisible>
-                  <Enfants/>
+                  <Enfants>
+                    <Iteration>
+                      <Position>999.5;966.5</Position>
+                      <StyleLien>1</StyleLien>
+                      <Titre>Pour temp de tempMemo à 0 </Titre>
+                      <IterationFixe>1</IterationFixe>
+                      <Enfants>
+                        <Action>
+                          <Position>869;1105</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>?</PreAssertion>
+                          <PostAssertion>?</PostAssertion>
+                          <Titre>Afficher: temp</Titre>
+                          <DetailsVisible>1</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                        <Action>
+                          <Position>1040;1108</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>?</PreAssertion>
+                          <PostAssertion>?</PostAssertion>
+                          <Titre>temp -= 1</Titre>
+                          <DetailsVisible>1</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                      </Enfants>
+                    </Iteration>
+                    <Action>
+                      <Position>633;953</Position>
+                      <StyleLien>1</StyleLien>
+                      <PreAssertion>?</PreAssertion>
+                      <PostAssertion>?</PostAssertion>
+                      <Titre>Afficher: "Compte à rebours: "</Titre>
+                      <DetailsVisible>1</DetailsVisible>
+                      <DetailsVideVisible>0</DetailsVideVisible>
+                      <Enfants/>
+                    </Action>
+                    <Action>
+                      <Position>1205;952</Position>
+                      <StyleLien>1</StyleLien>
+                      <PreAssertion>?</PreAssertion>
+                      <PostAssertion>?</PostAssertion>
+                      <Titre>Effacer tout</Titre>
+                      <DetailsVisible>1</DetailsVisible>
+                      <DetailsVideVisible>0</DetailsVideVisible>
+                      <Enfants/>
+                    </Action>
+                  </Enfants>
                 </Action>
                 <Action>
                   <Position>1164;806</Position>
@@ -70,7 +119,7 @@ chiffrePLusPetit</PostAssertion>
                   <PreAssertion>chiffrePair,chiffreImpair,
 centreDuCarre,
 chiffrePLusPetit</PreAssertion>
-                  <PostAssertion>∅</PostAssertion>
+                  <PostAssertion>score</PostAssertion>
                   <Titre>poserQuestion</Titre>
                   <DetailsVisible>1</DetailsVisible>
                   <DetailsVideVisible>1</DetailsVideVisible>

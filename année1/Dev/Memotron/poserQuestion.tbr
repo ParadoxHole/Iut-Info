@@ -2,12 +2,14 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>poserQuestion</nom>
-  <date_creation>2/10/2022 01:05</date_creation>
+  <date_creation>2/10/2022 01:44</date_creation>
   <Elements>
     <Action>
-      <Position>659;203</Position>
+      <Position>452;208</Position>
       <StyleLien>2</StyleLien>
-      <PreAssertion>?</PreAssertion>
+      <PreAssertion>chiffrePair,chiffreImpair,
+centreDuCarre,
+chiffrePLusPetit</PreAssertion>
       <PostAssertion>?</PostAssertion>
       <Titre>poserQuestion</Titre>
       <DetailsVisible>1</DetailsVisible>
@@ -344,5 +346,21 @@ chiffrePLusPetit, questionAleatoire</PreAssertion>
       </Enfants>
     </Action>
   </Elements>
-  <Dictionary/>
+  <Dictionary>
+    <Entry>
+      <Name>score</Name>
+      <Type>entier positif</Type>
+      <Signification>score du joueur</Signification>
+    </Entry>
+    <Entry>
+      <Name>bonneReponse</Name>
+      <Type>entier positif</Type>
+      <Signification>bonne reponse à la question posé</Signification>
+    </Entry>
+    <Entry>
+      <Name>reponseJoueur</Name>
+      <Type>entier positif</Type>
+      <Signification>reponse du joueur</Signification>
+    </Entry>
+  </Dictionary>
 </Algorithme>
