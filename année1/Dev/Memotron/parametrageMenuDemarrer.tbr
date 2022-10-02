@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
-  <nom>parametrageMenuDemarrer</nom>
-  <date_creation>2/10/2022 03:12</date_creation>
+  <nom>initialiserLaPartie</nom>
+  <date_creation>2/10/2022 16:33</date_creation>
   <Elements>
     <Action>
-      <Position>654;106</Position>
+      <Position>110;96</Position>
       <StyleLien>2</StyleLien>
       <PreAssertion>?</PreAssertion>
       <PostAssertion>tailleCarre,
@@ -22,7 +22,7 @@ debugMode,</PostAssertion>
           <IterationFixe>0</IterationFixe>
           <Enfants>
             <Action>
-              <Position>454;499</Position>
+              <Position>452;495</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>debugMode</PreAssertion>
               <PostAssertion>?</PostAssertion>
@@ -39,7 +39,7 @@ debugMode,</PostAssertion>
                       <Titre>debugMode = false</Titre>
                       <Enfants>
                         <Action>
-                          <Position>472;746</Position>
+                          <Position>472;741</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -54,7 +54,7 @@ debugMode,</PostAssertion>
                       <Titre>Sinon</Titre>
                       <Enfants>
                         <Action>
-                          <Position>662;848</Position>
+                          <Position>662;845</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -70,7 +70,7 @@ debugMode,</PostAssertion>
               </Enfants>
             </Action>
             <Action>
-              <Position>-123;510</Position>
+              <Position>-123;493</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>tempMemorisation</PreAssertion>
               <PostAssertion>?</PostAssertion>
@@ -87,11 +87,11 @@ debugMode,</PostAssertion>
                       <Titre>tempMemorisation = 10</Titre>
                       <Enfants>
                         <Action>
-                          <Position>-134;742</Position>
+                          <Position>-108;747</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>temp</PostAssertion>
-                          <Titre>Afficher "2/ Augmenter le temp de memorisation à 15 (acctuellement 10)"</Titre>
+                          <Titre>Afficher "2/ Augmenter le temp de memorisation à 15s (actuellement 10s)"</Titre>
                           <DetailsVisible>0</DetailsVisible>
                           <DetailsVideVisible>0</DetailsVideVisible>
                           <Enfants/>
@@ -102,11 +102,11 @@ debugMode,</PostAssertion>
                       <Titre>Sinon</Titre>
                       <Enfants>
                         <Action>
-                          <Position>101;848</Position>
+                          <Position>118;848</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>temp</PostAssertion>
-                          <Titre>Afficher "2/ Augmenter le temp de memorisation à 10 (acctuellement 15)"</Titre>
+                          <Titre>Afficher "2/ Diminuer le temp de memorisation à 10s (actuellement 15s)"</Titre>
                           <DetailsVisible>0</DetailsVisible>
                           <DetailsVideVisible>0</DetailsVideVisible>
                           <Enfants/>
@@ -118,7 +118,7 @@ debugMode,</PostAssertion>
               </Enfants>
             </Action>
             <Action>
-              <Position>-540;507</Position>
+              <Position>-542;492</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>tailleCarre</PreAssertion>
               <PostAssertion>?</PostAssertion>
@@ -127,7 +127,7 @@ debugMode,</PostAssertion>
               <DetailsVideVisible>0</DetailsVideVisible>
               <Enfants>
                 <Condition>
-                  <Position>-421;625</Position>
+                  <Position>-423;624</Position>
                   <StyleLien>0</StyleLien>
                   <estUnique>0</estUnique>
                   <operationsLogiques>
@@ -135,11 +135,11 @@ debugMode,</PostAssertion>
                       <Titre>tailleCarre = 3</Titre>
                       <Enfants>
                         <Action>
-                          <Position>-666;750</Position>
+                          <Position>-668;749</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>temp</PostAssertion>
-                          <Titre>Afficher "1/ Augmenter la taille du carré à 3 (acctuellement 5)"</Titre>
+                          <Titre>Afficher "1/ Augmenter la taille du carré à 5 (actuellement 3)"</Titre>
                           <DetailsVisible>0</DetailsVisible>
                           <DetailsVideVisible>0</DetailsVideVisible>
                           <Enfants/>
@@ -150,11 +150,11 @@ debugMode,</PostAssertion>
                       <Titre>Sinon</Titre>
                       <Enfants>
                         <Action>
-                          <Position>-430;850</Position>
+                          <Position>-432;849</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>temp</PostAssertion>
-                          <Titre>Afficher "1/ Augmenter la taille du carré à 5 (acctuellement 3)"</Titre>
+                          <Titre>Afficher "1/ Diminuer la taille du carré à 3 (actuellement 5)"</Titre>
                           <DetailsVisible>0</DetailsVisible>
                           <DetailsVideVisible>0</DetailsVideVisible>
                           <Enfants/>
@@ -166,7 +166,7 @@ debugMode,</PostAssertion>
               </Enfants>
             </Action>
             <Action>
-              <Position>-846;507</Position>
+              <Position>-837;491</Position>
               <StyleLien>1</StyleLien>
               <PreAssertion>?</PreAssertion>
               <PostAssertion>?</PostAssertion>
@@ -176,7 +176,7 @@ debugMode,</PostAssertion>
               <Enfants/>
             </Action>
             <Action>
-              <Position>911;492</Position>
+              <Position>900;496</Position>
               <StyleLien>1</StyleLien>
               <PreAssertion>?</PreAssertion>
               <PostAssertion>?</PostAssertion>
@@ -187,14 +187,14 @@ debugMode,</PostAssertion>
             </Action>
             <Condition>
               <Position>1139;497</Position>
-              <StyleLien>0</StyleLien>
+              <StyleLien>1</StyleLien>
               <estUnique>0</estUnique>
               <operationsLogiques>
                 <operation>
                   <Titre>messageErreur = true</Titre>
                   <Enfants>
                     <Action>
-                      <Position>1144;631</Position>
+                      <Position>1062;660</Position>
                       <StyleLien>1</StyleLien>
                       <PreAssertion>?</PreAssertion>
                       <PostAssertion>temp</PostAssertion>
@@ -204,12 +204,22 @@ un chifre entre 1 et 4 !"</Titre>
                       <DetailsVideVisible>0</DetailsVideVisible>
                       <Enfants/>
                     </Action>
+                    <Action>
+                      <Position>1291;660</Position>
+                      <StyleLien>1</StyleLien>
+                      <PreAssertion>∅</PreAssertion>
+                      <PostAssertion>∅</PostAssertion>
+                      <Titre>messageErreur = false</Titre>
+                      <DetailsVisible>0</DetailsVisible>
+                      <DetailsVideVisible>1</DetailsVideVisible>
+                      <Enfants/>
+                    </Action>
                   </Enfants>
                 </operation>
               </operationsLogiques>
             </Condition>
             <Action>
-              <Position>1426;491</Position>
+              <Position>1443;487</Position>
               <StyleLien>1</StyleLien>
               <PreAssertion>?</PreAssertion>
               <PostAssertion>?</PostAssertion>
@@ -219,7 +229,7 @@ un chifre entre 1 et 4 !"</Titre>
               <Enfants/>
             </Action>
             <Action>
-              <Position>1729;491</Position>
+              <Position>1829;485</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>choix</PreAssertion>
               <PostAssertion>tailleCarre,debugMode,
@@ -230,7 +240,7 @@ messageErreur</PostAssertion>
               <DetailsVideVisible>1</DetailsVideVisible>
               <Enfants>
                 <ConditionMultiple>
-                  <Position>1770;623</Position>
+                  <Position>1867;632</Position>
                   <StyleLien>0</StyleLien>
                   <Titre>Choix</Titre>
                   <operationsLogiques>
@@ -308,7 +318,7 @@ messageErreur</PostAssertion>
                                   <Titre>tempMemorisation = 10</Titre>
                                   <Enfants>
                                     <Action>
-                                      <Position>1427;1321</Position>
+                                      <Position>1430;1312</Position>
                                       <StyleLien>1</StyleLien>
                                       <PreAssertion>?</PreAssertion>
                                       <PostAssertion>temp</PostAssertion>
@@ -323,7 +333,7 @@ messageErreur</PostAssertion>
                                   <Titre>sinon</Titre>
                                   <Enfants>
                                     <Action>
-                                      <Position>1684;1324</Position>
+                                      <Position>1683;1312</Position>
                                       <StyleLien>1</StyleLien>
                                       <PreAssertion>?</PreAssertion>
                                       <PostAssertion>temp</PostAssertion>
@@ -361,11 +371,11 @@ messageErreur</PostAssertion>
                                   <Titre>debugMode = false</Titre>
                                   <Enfants>
                                     <Action>
-                                      <Position>2014;1323</Position>
+                                      <Position>2009;1317</Position>
                                       <StyleLien>1</StyleLien>
                                       <PreAssertion>?</PreAssertion>
                                       <PostAssertion>debug</PostAssertion>
-                                      <Titre>debugMode ← false</Titre>
+                                      <Titre>debugMode ← true</Titre>
                                       <DetailsVisible>0</DetailsVisible>
                                       <DetailsVideVisible>0</DetailsVideVisible>
                                       <Enfants/>
@@ -376,11 +386,11 @@ messageErreur</PostAssertion>
                                   <Titre>sinon</Titre>
                                   <Enfants>
                                     <Action>
-                                      <Position>2221;1313</Position>
+                                      <Position>2222;1317</Position>
                                       <StyleLien>1</StyleLien>
                                       <PreAssertion>?</PreAssertion>
                                       <PostAssertion>debug</PostAssertion>
-                                      <Titre>debugMode ← true</Titre>
+                                      <Titre>debugMode ← false</Titre>
                                       <DetailsVisible>0</DetailsVisible>
                                       <DetailsVideVisible>0</DetailsVideVisible>
                                       <Enfants/>
@@ -397,7 +407,7 @@ messageErreur</PostAssertion>
                       <Titre>4</Titre>
                       <Enfants>
                         <Sortie>
-                          <Position>2473;1080</Position>
+                          <Position>2161;822</Position>
                         </Sortie>
                       </Enfants>
                     </operation>
@@ -405,12 +415,12 @@ messageErreur</PostAssertion>
                       <Titre>Sinon</Titre>
                       <Enfants>
                         <Action>
-                          <Position>2557;1053</Position>
+                          <Position>2231;790</Position>
                           <StyleLien>1</StyleLien>
-                          <PreAssertion>?</PreAssertion>
-                          <PostAssertion>?</PostAssertion>
+                          <PreAssertion>messageErreur</PreAssertion>
+                          <PostAssertion>messageErreur</PostAssertion>
                           <Titre>messageErreur ← true</Titre>
-                          <DetailsVisible>0</DetailsVisible>
+                          <DetailsVisible>1</DetailsVisible>
                           <DetailsVideVisible>1</DetailsVideVisible>
                           <Enfants/>
                         </Action>
@@ -420,16 +430,26 @@ messageErreur</PostAssertion>
                 </ConditionMultiple>
               </Enfants>
             </Action>
+            <Action>
+              <Position>1698;487</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>?</PreAssertion>
+              <PostAssertion>choix</PostAssertion>
+              <Titre>saisirChoix</Titre>
+              <DetailsVisible>0</DetailsVisible>
+              <DetailsVideVisible>0</DetailsVideVisible>
+              <Enfants/>
+            </Action>
           </Enfants>
         </Iteration>
         <Action>
-          <Position>-755;231</Position>
+          <Position>-830;238</Position>
           <StyleLien>1</StyleLien>
           <PreAssertion>?</PreAssertion>
           <PostAssertion>?</PostAssertion>
           <Titre>tailleCarre = 3
 tempMemorisation = 10
-debugMode = 0
+debugMode = false
 messageErreur = false</Titre>
           <DetailsVisible>1</DetailsVisible>
           <DetailsVideVisible>0</DetailsVideVisible>
@@ -441,12 +461,12 @@ messageErreur = false</Titre>
   <Dictionary>
     <Entry>
       <Name>tailleCarre</Name>
-      <Type>integer</Type>
+      <Type>entier positif</Type>
       <Signification>la taille du carre du memotron</Signification>
     </Entry>
     <Entry>
       <Name>tempMemorisation</Name>
-      <Type>integer</Type>
+      <Type>entier positif</Type>
       <Signification>le temp de memorisation dont dispose le joueur</Signification>
     </Entry>
     <Entry>
@@ -461,13 +481,8 @@ messageErreur = false</Titre>
     </Entry>
     <Entry>
       <Name>choix</Name>
-      <Type>interger</Type>
+      <Type>entier positif</Type>
       <Signification>choix du joueur</Signification>
-    </Entry>
-    <Entry>
-      <Name></Name>
-      <Type></Type>
-      <Signification></Signification>
     </Entry>
   </Dictionary>
 </Algorithme>

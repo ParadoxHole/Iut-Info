@@ -2,10 +2,10 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>Memotron</nom>
-  <date_creation>2/10/2022 03:12</date_creation>
+  <date_creation>2/10/2022 16:33</date_creation>
   <Elements>
     <Action>
-      <Position>282;147</Position>
+      <Position>344;145</Position>
       <StyleLien>2</StyleLien>
       <PreAssertion>?</PreAssertion>
       <PostAssertion>?</PostAssertion>
@@ -14,7 +14,7 @@
       <DetailsVideVisible>0</DetailsVideVisible>
       <Enfants>
         <Action>
-          <Position>-436;421</Position>
+          <Position>-358;421</Position>
           <StyleLien>1</StyleLien>
           <PreAssertion>?</PreAssertion>
           <PostAssertion>tailleCarre,
@@ -34,7 +34,7 @@ debugMode,</PreAssertion>
           <PostAssertion>?</PostAssertion>
           <Titre>jouerLaPartie</Titre>
           <DetailsVisible>1</DetailsVisible>
-          <DetailsVideVisible>1</DetailsVideVisible>
+          <DetailsVideVisible>0</DetailsVideVisible>
           <Enfants>
             <Iteration>
               <Position>975.5;524.5</Position>
@@ -43,88 +43,106 @@ debugMode,</PreAssertion>
               <IterationFixe>0</IterationFixe>
               <Enfants>
                 <Action>
-                  <Position>153;807</Position>
+                  <Position>203;802</Position>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>tailleCarre</PreAssertion>
-                  <PostAssertion>chiffrePair,chiffreImpair,
+                  <PostAssertion>chiffrePair, chiffreImpair,
 centreDuCarre,
-chiffrePLusPetit</PostAssertion>
+chiffrePLusPetit,
+chiffrePlusGrand</PostAssertion>
                   <Titre>afficherCarre</Titre>
                   <DetailsVisible>1</DetailsVisible>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants/>
                 </Action>
                 <Action>
-                  <Position>713;808</Position>
-                  <StyleLien>2</StyleLien>
-                  <PreAssertion>tempMemorisation</PreAssertion>
-                  <PostAssertion>?</PostAssertion>
-                  <Titre>tempMemorisation</Titre>
-                  <DetailsVisible>1</DetailsVisible>
-                  <DetailsVideVisible>0</DetailsVideVisible>
-                  <Enfants>
-                    <Iteration>
-                      <Position>999.5;966.5</Position>
-                      <StyleLien>1</StyleLien>
-                      <Titre>Pour temp de tempMemo à 0 </Titre>
-                      <IterationFixe>1</IterationFixe>
-                      <Enfants>
-                        <Action>
-                          <Position>869;1105</Position>
-                          <StyleLien>1</StyleLien>
-                          <PreAssertion>?</PreAssertion>
-                          <PostAssertion>?</PostAssertion>
-                          <Titre>Afficher: temp</Titre>
-                          <DetailsVisible>1</DetailsVisible>
-                          <DetailsVideVisible>0</DetailsVideVisible>
-                          <Enfants/>
-                        </Action>
-                        <Action>
-                          <Position>1040;1108</Position>
-                          <StyleLien>1</StyleLien>
-                          <PreAssertion>?</PreAssertion>
-                          <PostAssertion>?</PostAssertion>
-                          <Titre>temp -= 1</Titre>
-                          <DetailsVisible>1</DetailsVisible>
-                          <DetailsVideVisible>0</DetailsVideVisible>
-                          <Enfants/>
-                        </Action>
-                      </Enfants>
-                    </Iteration>
-                    <Action>
-                      <Position>633;953</Position>
-                      <StyleLien>1</StyleLien>
-                      <PreAssertion>?</PreAssertion>
-                      <PostAssertion>?</PostAssertion>
-                      <Titre>Afficher: "Compte à rebours: "</Titre>
-                      <DetailsVisible>1</DetailsVisible>
-                      <DetailsVideVisible>0</DetailsVideVisible>
-                      <Enfants/>
-                    </Action>
-                    <Action>
-                      <Position>1205;952</Position>
-                      <StyleLien>1</StyleLien>
-                      <PreAssertion>?</PreAssertion>
-                      <PostAssertion>?</PostAssertion>
-                      <Titre>Effacer tout</Titre>
-                      <DetailsVisible>1</DetailsVisible>
-                      <DetailsVideVisible>0</DetailsVideVisible>
-                      <Enfants/>
-                    </Action>
-                  </Enfants>
-                </Action>
-                <Action>
                   <Position>1164;806</Position>
                   <StyleLien>1</StyleLien>
-                  <PreAssertion>chiffrePair,chiffreImpair,
+                  <PreAssertion>chiffrePair, chiffreImpair,
 centreDuCarre,
-chiffrePLusPetit</PreAssertion>
+chiffrePLusPetit,
+chiffrePlusGrand, score</PreAssertion>
                   <PostAssertion>score</PostAssertion>
                   <Titre>poserQuestion</Titre>
                   <DetailsVisible>1</DetailsVisible>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants/>
                 </Action>
+                <Condition>
+                  <Position>910;733</Position>
+                  <StyleLien>1</StyleLien>
+                  <estUnique>1</estUnique>
+                  <operationsLogiques>
+                    <operation>
+                      <Titre>debugMode = false</Titre>
+                      <Enfants>
+                        <Action>
+                          <Position>686;919</Position>
+                          <StyleLien>2</StyleLien>
+                          <PreAssertion>tempMemorisation</PreAssertion>
+                          <PostAssertion>?</PostAssertion>
+                          <Titre>lancerLeCompteARebour</Titre>
+                          <DetailsVisible>1</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants>
+                            <Action>
+                              <Position>635;1076</Position>
+                              <StyleLien>1</StyleLien>
+                              <PreAssertion>?</PreAssertion>
+                              <PostAssertion>?</PostAssertion>
+                              <Titre>Afficher: "Compte à rebours: "</Titre>
+                              <DetailsVisible>1</DetailsVisible>
+                              <DetailsVideVisible>0</DetailsVideVisible>
+                              <Enfants/>
+                            </Action>
+                            <Iteration>
+                              <Position>1001.5;1089.5</Position>
+                              <StyleLien>1</StyleLien>
+                              <Titre>Pour i de tempMemo à 0</Titre>
+                              <IterationFixe>1</IterationFixe>
+                              <Enfants>
+                                <Action>
+                                  <Position>935;1221</Position>
+                                  <StyleLien>1</StyleLien>
+                                  <PreAssertion>?</PreAssertion>
+                                  <PostAssertion>?</PostAssertion>
+                                  <Titre>Afficher: i</Titre>
+                                  <DetailsVisible>1</DetailsVisible>
+                                  <DetailsVideVisible>0</DetailsVideVisible>
+                                  <Enfants/>
+                                </Action>
+                                <Action>
+                                  <Position>1043;1221</Position>
+                                  <StyleLien>1</StyleLien>
+                                  <PreAssertion>?</PreAssertion>
+                                  <PostAssertion>?</PostAssertion>
+                                  <Titre>i --</Titre>
+                                  <DetailsVisible>1</DetailsVisible>
+                                  <DetailsVideVisible>0</DetailsVideVisible>
+                                  <Enfants/>
+                                </Action>
+                              </Enfants>
+                            </Iteration>
+                            <Action>
+                              <Position>1219;1070</Position>
+                              <StyleLien>1</StyleLien>
+                              <PreAssertion>?</PreAssertion>
+                              <PostAssertion>?</PostAssertion>
+                              <Titre>Effacer le terminal</Titre>
+                              <DetailsVisible>1</DetailsVisible>
+                              <DetailsVideVisible>0</DetailsVideVisible>
+                              <Enfants/>
+                            </Action>
+                          </Enfants>
+                        </Action>
+                      </Enfants>
+                    </operation>
+                    <operation>
+                      <Titre>Sinon</Titre>
+                      <Enfants/>
+                    </operation>
+                  </operationsLogiques>
+                </Condition>
               </Enfants>
             </Iteration>
           </Enfants>

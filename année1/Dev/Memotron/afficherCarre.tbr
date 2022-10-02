@@ -2,40 +2,43 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>afficherCarre</nom>
-  <date_creation>2/10/2022 01:44</date_creation>
+  <date_creation>2/10/2022 16:33</date_creation>
   <Elements>
     <Action>
-      <Position>125;71</Position>
+      <Position>573;217</Position>
       <StyleLien>2</StyleLien>
       <PreAssertion>tailleCarre</PreAssertion>
       <PostAssertion>chiffrePair,chiffreImpair,
 centreDuCarre,
-chiffrePLusPetit</PostAssertion>
+chiffrePLusPetit,
+chiffrePlusGrand</PostAssertion>
       <Titre>afficherCarre</Titre>
       <DetailsVisible>1</DetailsVisible>
       <DetailsVideVisible>1</DetailsVideVisible>
       <Enfants>
         <Iteration>
-          <Position>312.5;220.5</Position>
+          <Position>761.5;355.5</Position>
           <StyleLien>1</StyleLien>
           <Titre>pour element de 0 à tailleCarre²</Titre>
           <IterationFixe>1</IterationFixe>
           <Enfants>
             <Action>
-              <Position>-64;418</Position>
+              <Position>386;560</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>chiffreAleatoire,
 centreDuCarre,
-chiffrePairs,chiffreImpairs,</PreAssertion>
+chiffrePairs,chiffreImpairs,
+chiffrePlusPetit,chiffrePLusGrand</PreAssertion>
               <PostAssertion>chiffrePair,chiffreImpair,
 centreDuCarre,
-chiffrePLusPetit</PostAssertion>
+chiffrePLusPetit,
+chiffrePlusGrand</PostAssertion>
               <Titre>associerChiffreQuestion</Titre>
               <DetailsVisible>1</DetailsVisible>
               <DetailsVideVisible>1</DetailsVideVisible>
               <Enfants>
                 <Condition>
-                  <Position>-455;627</Position>
+                  <Position>-2;764</Position>
                   <StyleLien>0</StyleLien>
                   <estUnique>0</estUnique>
                   <operationsLogiques>
@@ -43,7 +46,7 @@ chiffrePLusPetit</PostAssertion>
                       <Titre>chiffreAleatoire%2=0</Titre>
                       <Enfants>
                         <Action>
-                          <Position>-451;758</Position>
+                          <Position>-1;900</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -58,7 +61,7 @@ chiffrePLusPetit</PostAssertion>
                       <Titre>Sinon</Titre>
                       <Enfants>
                         <Action>
-                          <Position>-265;757</Position>
+                          <Position>185;897</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -72,7 +75,7 @@ chiffrePLusPetit</PostAssertion>
                   </operationsLogiques>
                 </Condition>
                 <Condition>
-                  <Position>-9;623</Position>
+                  <Position>441;765</Position>
                   <StyleLien>0</StyleLien>
                   <estUnique>0</estUnique>
                   <operationsLogiques>
@@ -80,7 +83,7 @@ chiffrePLusPetit</PostAssertion>
                       <Titre>element = (tailleCarre²+1)/2</Titre>
                       <Enfants>
                         <Action>
-                          <Position>-16;751</Position>
+                          <Position>435;893</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -94,7 +97,7 @@ chiffrePLusPetit</PostAssertion>
                   </operationsLogiques>
                 </Condition>
                 <Condition>
-                  <Position>362;624</Position>
+                  <Position>811;767</Position>
                   <StyleLien>1</StyleLien>
                   <estUnique>1</estUnique>
                   <operationsLogiques>
@@ -102,7 +105,7 @@ chiffrePLusPetit</PostAssertion>
                       <Titre>chiffrePlusGrand &lt; chiffreAleatoire</Titre>
                       <Enfants>
                         <Action>
-                          <Position>377;749</Position>
+                          <Position>825;892</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>∅</PreAssertion>
                           <PostAssertion>∅</PostAssertion>
@@ -120,7 +123,7 @@ chiffrePLusPetit</PostAssertion>
                   </operationsLogiques>
                 </Condition>
                 <Condition>
-                  <Position>815;628</Position>
+                  <Position>1262;770</Position>
                   <StyleLien>1</StyleLien>
                   <estUnique>1</estUnique>
                   <operationsLogiques>
@@ -128,7 +131,7 @@ chiffrePLusPetit</PostAssertion>
                       <Titre>chiffrePlusPetit > chiffreAleatoire</Titre>
                       <Enfants>
                         <Action>
-                          <Position>830;754</Position>
+                          <Position>1275;895</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>∅</PreAssertion>
                           <PostAssertion>∅</PostAssertion>
@@ -147,29 +150,8 @@ chiffrePLusPetit</PostAssertion>
                 </Condition>
               </Enfants>
             </Action>
-            <Action>
-              <Position>-823;425</Position>
-              <StyleLien>2</StyleLien>
-              <PreAssertion>?</PreAssertion>
-              <PostAssertion>chiffreAleatoire</PostAssertion>
-              <Titre>genererChiffreAleatoireEntre1Et9</Titre>
-              <DetailsVisible>1</DetailsVisible>
-              <DetailsVideVisible>0</DetailsVideVisible>
-              <Enfants>
-                <Action>
-                  <Position>-783;615</Position>
-                  <StyleLien>1</StyleLien>
-                  <PreAssertion>?</PreAssertion>
-                  <PostAssertion>?</PostAssertion>
-                  <Titre>Afficher: chiffreAleatoire</Titre>
-                  <DetailsVisible>1</DetailsVisible>
-                  <DetailsVideVisible>0</DetailsVideVisible>
-                  <Enfants/>
-                </Action>
-              </Enfants>
-            </Action>
             <Condition>
-              <Position>1302;341</Position>
+              <Position>1745;504</Position>
               <StyleLien>1</StyleLien>
               <estUnique>1</estUnique>
               <operationsLogiques>
@@ -177,7 +159,7 @@ chiffrePLusPetit</PostAssertion>
                   <Titre>element%3 = 0</Titre>
                   <Enfants>
                     <Action>
-                      <Position>1314;494</Position>
+                      <Position>1756;631</Position>
                       <StyleLien>1</StyleLien>
                       <PreAssertion>∅</PreAssertion>
                       <PostAssertion>∅</PostAssertion>
@@ -194,6 +176,37 @@ chiffrePLusPetit</PostAssertion>
                 </operation>
               </operationsLogiques>
             </Condition>
+            <Action>
+              <Position>-360;458</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>?</PreAssertion>
+              <PostAssertion>chiffreAleatoire</PostAssertion>
+              <Titre>afficherChiffre</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>0</DetailsVideVisible>
+              <Enfants>
+                <Action>
+                  <Position>-758;595</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>chiffreAleatoire</PostAssertion>
+                  <Titre>chiffreAleatoire← genererChiffreAleatoireEntre1Et9</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>-157;601</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>Afficher: chiffreAleatoire</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Action>
           </Enfants>
         </Iteration>
       </Enfants>
@@ -202,33 +215,38 @@ chiffrePLusPetit</PostAssertion>
   <Dictionary>
     <Entry>
       <Name>chiffreAleatoire</Name>
-      <Type>integer</Type>
+      <Type>entier positif</Type>
       <Signification>chiffre aléatoire generer par l'ordianteur</Signification>
     </Entry>
     <Entry>
       <Name>centreDuCarre</Name>
-      <Type>integer</Type>
+      <Type>entier positif</Type>
       <Signification>nombre au centre du carre memotron</Signification>
     </Entry>
     <Entry>
       <Name>chiffrePairs</Name>
-      <Type>integer</Type>
+      <Type>entier positif</Type>
       <Signification>nombre de chifre pair dans le carre du memotron</Signification>
     </Entry>
     <Entry>
       <Name>chiffreImpairs</Name>
-      <Type>integer</Type>
+      <Type>entier positif</Type>
       <Signification>nombre de chifre impair dans le carre du memotron</Signification>
     </Entry>
     <Entry>
       <Name>chiffrePlusGrand</Name>
-      <Type>integer</Type>
-      <Signification>le chiffre le plus grand dans le carre du memotron</Signification>
+      <Type>entier positif</Type>
+      <Signification>chiffre le plus grand dans le carre du memotron</Signification>
     </Entry>
     <Entry>
       <Name>chiffrePlusPetit</Name>
-      <Type>integer</Type>
-      <Signification>le chiffre le plus petit dans le carre du memotron</Signification>
+      <Type>entier positif</Type>
+      <Signification>chiffre le plus petit dans le carre du memotron</Signification>
+    </Entry>
+    <Entry>
+      <Name>element</Name>
+      <Type>entier positif</Type>
+      <Signification></Signification>
     </Entry>
   </Dictionary>
 </Algorithme>
