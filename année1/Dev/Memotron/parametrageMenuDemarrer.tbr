@@ -2,458 +2,151 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>initialiserLaPartie</nom>
-  <date_creation>2/10/2022 16:33</date_creation>
+  <date_creation>5/10/2022 23:25</date_creation>
   <Elements>
     <Action>
-      <Position>110;96</Position>
+      <Position>675;493</Position>
       <StyleLien>2</StyleLien>
       <PreAssertion>?</PreAssertion>
       <PostAssertion>tailleCarre,
 tempMemorisation,
-debugMode,</PostAssertion>
+debugModeActif</PostAssertion>
       <Titre>InitialiserLaPartie</Titre>
       <DetailsVisible>1</DetailsVisible>
       <DetailsVideVisible>0</DetailsVideVisible>
       <Enfants>
-        <Iteration>
-          <Position>729.5;267.5</Position>
-          <StyleLien>1</StyleLien>
-          <Titre>?</Titre>
-          <IterationFixe>0</IterationFixe>
+        <Action>
+          <Position>52;738</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>?</PreAssertion>
+          <PostAssertion>tailleCarre,
+tempMemorisation,
+debugModeActif,
+erreurDeSaisie</PostAssertion>
+          <Titre>initialisatierVariables</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>0</DetailsVideVisible>
           <Enfants>
             <Action>
-              <Position>452;495</Position>
-              <StyleLien>2</StyleLien>
-              <PreAssertion>debugMode</PreAssertion>
-              <PostAssertion>?</PostAssertion>
-              <Titre>afficherLeModeDebug</Titre>
-              <DetailsVisible>1</DetailsVisible>
-              <DetailsVideVisible>0</DetailsVideVisible>
-              <Enfants>
-                <Condition>
-                  <Position>561;619</Position>
-                  <StyleLien>0</StyleLien>
-                  <estUnique>0</estUnique>
-                  <operationsLogiques>
-                    <operation>
-                      <Titre>debugMode = false</Titre>
-                      <Enfants>
-                        <Action>
-                          <Position>472;741</Position>
-                          <StyleLien>1</StyleLien>
-                          <PreAssertion>?</PreAssertion>
-                          <PostAssertion>?</PostAssertion>
-                          <Titre>Afficher "3/ Activer le mode debug"</Titre>
-                          <DetailsVisible>1</DetailsVisible>
-                          <DetailsVideVisible>0</DetailsVideVisible>
-                          <Enfants/>
-                        </Action>
-                      </Enfants>
-                    </operation>
-                    <operation>
-                      <Titre>Sinon</Titre>
-                      <Enfants>
-                        <Action>
-                          <Position>662;845</Position>
-                          <StyleLien>1</StyleLien>
-                          <PreAssertion>?</PreAssertion>
-                          <PostAssertion>?</PostAssertion>
-                          <Titre>Afficher "3/ Desactiver le mode debug"</Titre>
-                          <DetailsVisible>1</DetailsVisible>
-                          <DetailsVideVisible>0</DetailsVideVisible>
-                          <Enfants/>
-                        </Action>
-                      </Enfants>
-                    </operation>
-                  </operationsLogiques>
-                </Condition>
-              </Enfants>
-            </Action>
-            <Action>
-              <Position>-123;493</Position>
-              <StyleLien>2</StyleLien>
-              <PreAssertion>tempMemorisation</PreAssertion>
-              <PostAssertion>?</PostAssertion>
-              <Titre>afficherLaDurreeActuel</Titre>
-              <DetailsVisible>1</DetailsVisible>
-              <DetailsVideVisible>0</DetailsVideVisible>
-              <Enfants>
-                <Condition>
-                  <Position>31;639</Position>
-                  <StyleLien>0</StyleLien>
-                  <estUnique>0</estUnique>
-                  <operationsLogiques>
-                    <operation>
-                      <Titre>tempMemorisation = 10</Titre>
-                      <Enfants>
-                        <Action>
-                          <Position>-108;747</Position>
-                          <StyleLien>1</StyleLien>
-                          <PreAssertion>?</PreAssertion>
-                          <PostAssertion>temp</PostAssertion>
-                          <Titre>Afficher "2/ Augmenter le temp de memorisation à 15s (actuellement 10s)"</Titre>
-                          <DetailsVisible>0</DetailsVisible>
-                          <DetailsVideVisible>0</DetailsVideVisible>
-                          <Enfants/>
-                        </Action>
-                      </Enfants>
-                    </operation>
-                    <operation>
-                      <Titre>Sinon</Titre>
-                      <Enfants>
-                        <Action>
-                          <Position>118;848</Position>
-                          <StyleLien>1</StyleLien>
-                          <PreAssertion>?</PreAssertion>
-                          <PostAssertion>temp</PostAssertion>
-                          <Titre>Afficher "2/ Diminuer le temp de memorisation à 10s (actuellement 15s)"</Titre>
-                          <DetailsVisible>0</DetailsVisible>
-                          <DetailsVideVisible>0</DetailsVideVisible>
-                          <Enfants/>
-                        </Action>
-                      </Enfants>
-                    </operation>
-                  </operationsLogiques>
-                </Condition>
-              </Enfants>
-            </Action>
-            <Action>
-              <Position>-542;492</Position>
-              <StyleLien>2</StyleLien>
-              <PreAssertion>tailleCarre</PreAssertion>
-              <PostAssertion>?</PostAssertion>
-              <Titre>afficherLaTailleActuel</Titre>
-              <DetailsVisible>1</DetailsVisible>
-              <DetailsVideVisible>0</DetailsVideVisible>
-              <Enfants>
-                <Condition>
-                  <Position>-423;624</Position>
-                  <StyleLien>0</StyleLien>
-                  <estUnique>0</estUnique>
-                  <operationsLogiques>
-                    <operation>
-                      <Titre>tailleCarre = 3</Titre>
-                      <Enfants>
-                        <Action>
-                          <Position>-668;749</Position>
-                          <StyleLien>1</StyleLien>
-                          <PreAssertion>?</PreAssertion>
-                          <PostAssertion>temp</PostAssertion>
-                          <Titre>Afficher "1/ Augmenter la taille du carré à 5 (actuellement 3)"</Titre>
-                          <DetailsVisible>0</DetailsVisible>
-                          <DetailsVideVisible>0</DetailsVideVisible>
-                          <Enfants/>
-                        </Action>
-                      </Enfants>
-                    </operation>
-                    <operation>
-                      <Titre>Sinon</Titre>
-                      <Enfants>
-                        <Action>
-                          <Position>-432;849</Position>
-                          <StyleLien>1</StyleLien>
-                          <PreAssertion>?</PreAssertion>
-                          <PostAssertion>temp</PostAssertion>
-                          <Titre>Afficher "1/ Diminuer la taille du carré à 3 (actuellement 5)"</Titre>
-                          <DetailsVisible>0</DetailsVisible>
-                          <DetailsVideVisible>0</DetailsVideVisible>
-                          <Enfants/>
-                        </Action>
-                      </Enfants>
-                    </operation>
-                  </operationsLogiques>
-                </Condition>
-              </Enfants>
-            </Action>
-            <Action>
-              <Position>-837;491</Position>
+              <Position>115;869</Position>
               <StyleLien>1</StyleLien>
-              <PreAssertion>?</PreAssertion>
-              <PostAssertion>?</PostAssertion>
-              <Titre>Afficher "** MEMOTRON **"</Titre>
-              <DetailsVisible>1</DetailsVisible>
-              <DetailsVideVisible>0</DetailsVideVisible>
+              <PreAssertion>∅</PreAssertion>
+              <PostAssertion>∅</PostAssertion>
+              <Titre>debugModeActif ← faux</Titre>
+              <DetailsVisible>0</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
               <Enfants/>
             </Action>
             <Action>
-              <Position>900;496</Position>
+              <Position>-135;869</Position>
               <StyleLien>1</StyleLien>
-              <PreAssertion>?</PreAssertion>
-              <PostAssertion>?</PostAssertion>
-              <Titre>Afficher "4/ Jouer"</Titre>
-              <DetailsVisible>1</DetailsVisible>
-              <DetailsVideVisible>0</DetailsVideVisible>
+              <PreAssertion>∅</PreAssertion>
+              <PostAssertion>∅</PostAssertion>
+              <Titre>tempMemorisation ← 10</Titre>
+              <DetailsVisible>0</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
               <Enfants/>
             </Action>
-            <Condition>
-              <Position>1139;497</Position>
+            <Action>
+              <Position>-303;868</Position>
               <StyleLien>1</StyleLien>
-              <estUnique>0</estUnique>
-              <operationsLogiques>
-                <operation>
-                  <Titre>messageErreur = true</Titre>
+              <PreAssertion>∅</PreAssertion>
+              <PostAssertion>∅</PostAssertion>
+              <Titre>tailleCarre ← 3</Titre>
+              <DetailsVisible>0</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants/>
+            </Action>
+            <Action>
+              <Position>363;871</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>∅</PreAssertion>
+              <PostAssertion>∅</PostAssertion>
+              <Titre>erreurDeSaisie ← faux</Titre>
+              <DetailsVisible>0</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants/>
+            </Action>
+          </Enfants>
+        </Action>
+        <Action>
+          <Position>999;747</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>tailleCarre,
+tempMemorisation,
+debugModeActif,
+erreurDeSaisie</PreAssertion>
+          <PostAssertion>tailleCarre,
+tempMemorisation,
+debugMode,</PostAssertion>
+          <Titre>parametrageMenuDemarrer</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>1</DetailsVideVisible>
+          <Enfants>
+            <Iteration>
+              <Position>1334.5;886.5</Position>
+              <StyleLien>1</StyleLien>
+              <Titre>?</Titre>
+              <IterationFixe>0</IterationFixe>
+              <Enfants>
+                <Action>
+                  <Position>532;1041</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>tailleCarre,debugModeActif,
+tempMemorisation,
+erreurDeSaisie</PreAssertion>
+                  <PostAssertion>erreurDeSaisie</PostAssertion>
+                  <Titre>afficherMenuDemarrer</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>1271;1044</Position>
+                  <StyleLien>2</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>choixJoueur</PostAssertion>
+                  <Titre>SaisieChoixJoueur</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
                   <Enfants>
                     <Action>
-                      <Position>1062;660</Position>
+                      <Position>1150;1202</Position>
                       <StyleLien>1</StyleLien>
                       <PreAssertion>?</PreAssertion>
-                      <PostAssertion>temp</PostAssertion>
-                      <Titre>Afficher "Veuillé entrez 
-un chifre entre 1 et 4 !"</Titre>
-                      <DetailsVisible>0</DetailsVisible>
+                      <PostAssertion>?</PostAssertion>
+                      <Titre>Afficher "Votre choix: "</Titre>
+                      <DetailsVisible>1</DetailsVisible>
                       <DetailsVideVisible>0</DetailsVideVisible>
                       <Enfants/>
                     </Action>
                     <Action>
-                      <Position>1291;660</Position>
+                      <Position>1397;1201</Position>
                       <StyleLien>1</StyleLien>
-                      <PreAssertion>∅</PreAssertion>
-                      <PostAssertion>∅</PostAssertion>
-                      <Titre>messageErreur = false</Titre>
-                      <DetailsVisible>0</DetailsVisible>
-                      <DetailsVideVisible>1</DetailsVideVisible>
+                      <PreAssertion>?</PreAssertion>
+                      <PostAssertion>choixJoueur</PostAssertion>
+                      <Titre>saisirChoixJoueur</Titre>
+                      <DetailsVisible>1</DetailsVisible>
+                      <DetailsVideVisible>0</DetailsVideVisible>
                       <Enfants/>
                     </Action>
                   </Enfants>
-                </operation>
-              </operationsLogiques>
-            </Condition>
-            <Action>
-              <Position>1443;487</Position>
-              <StyleLien>1</StyleLien>
-              <PreAssertion>?</PreAssertion>
-              <PostAssertion>?</PostAssertion>
-              <Titre>Afficher "Votre choix: "</Titre>
-              <DetailsVisible>1</DetailsVisible>
-              <DetailsVideVisible>0</DetailsVideVisible>
-              <Enfants/>
-            </Action>
-            <Action>
-              <Position>1829;485</Position>
-              <StyleLien>2</StyleLien>
-              <PreAssertion>choix</PreAssertion>
-              <PostAssertion>tailleCarre,debugMode,
+                </Action>
+                <Action>
+                  <Position>1671;1047</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>choixJoueur</PreAssertion>
+                  <PostAssertion>tailleCarre,debugModeActif,
 tempMemorisation,
-messageErreur</PostAssertion>
-              <Titre>traiterChoix</Titre>
-              <DetailsVisible>1</DetailsVisible>
-              <DetailsVideVisible>1</DetailsVideVisible>
-              <Enfants>
-                <ConditionMultiple>
-                  <Position>1867;632</Position>
-                  <StyleLien>0</StyleLien>
-                  <Titre>Choix</Titre>
-                  <operationsLogiques>
-                    <operation>
-                      <Titre>1</Titre>
-                      <Enfants>
-                        <Action>
-                          <Position>904;1058</Position>
-                          <StyleLien>2</StyleLien>
-                          <PreAssertion>tailleCarre</PreAssertion>
-                          <PostAssertion>tailleCarre</PostAssertion>
-                          <Titre>changerTaille</Titre>
-                          <DetailsVisible>1</DetailsVisible>
-                          <DetailsVideVisible>1</DetailsVideVisible>
-                          <Enfants>
-                            <Condition>
-                              <Position>987;1177</Position>
-                              <StyleLien>0</StyleLien>
-                              <estUnique>0</estUnique>
-                              <operationsLogiques>
-                                <operation>
-                                  <Titre>tailleCarre = 3</Titre>
-                                  <Enfants>
-                                    <Action>
-                                      <Position>951;1307</Position>
-                                      <StyleLien>1</StyleLien>
-                                      <PreAssertion>?</PreAssertion>
-                                      <PostAssertion>temp</PostAssertion>
-                                      <Titre>tailleCarre ← 5</Titre>
-                                      <DetailsVisible>0</DetailsVisible>
-                                      <DetailsVideVisible>0</DetailsVideVisible>
-                                      <Enfants/>
-                                    </Action>
-                                  </Enfants>
-                                </operation>
-                                <operation>
-                                  <Titre>sinon</Titre>
-                                  <Enfants>
-                                    <Action>
-                                      <Position>1127;1310</Position>
-                                      <StyleLien>1</StyleLien>
-                                      <PreAssertion>?</PreAssertion>
-                                      <PostAssertion>temp</PostAssertion>
-                                      <Titre>tailleCarre ← 3</Titre>
-                                      <DetailsVisible>0</DetailsVisible>
-                                      <DetailsVideVisible>0</DetailsVideVisible>
-                                      <Enfants/>
-                                    </Action>
-                                  </Enfants>
-                                </operation>
-                              </operationsLogiques>
-                            </Condition>
-                          </Enfants>
-                        </Action>
-                      </Enfants>
-                    </operation>
-                    <operation>
-                      <Titre>2</Titre>
-                      <Enfants>
-                        <Action>
-                          <Position>1350;1057</Position>
-                          <StyleLien>2</StyleLien>
-                          <PreAssertion>tempMemorisation</PreAssertion>
-                          <PostAssertion>tempMemorisation</PostAssertion>
-                          <Titre>changerTemp</Titre>
-                          <DetailsVisible>1</DetailsVisible>
-                          <DetailsVideVisible>1</DetailsVideVisible>
-                          <Enfants>
-                            <Condition>
-                              <Position>1467;1189</Position>
-                              <StyleLien>0</StyleLien>
-                              <estUnique>0</estUnique>
-                              <operationsLogiques>
-                                <operation>
-                                  <Titre>tempMemorisation = 10</Titre>
-                                  <Enfants>
-                                    <Action>
-                                      <Position>1430;1312</Position>
-                                      <StyleLien>1</StyleLien>
-                                      <PreAssertion>?</PreAssertion>
-                                      <PostAssertion>temp</PostAssertion>
-                                      <Titre>tempMemorisation ← 15</Titre>
-                                      <DetailsVisible>0</DetailsVisible>
-                                      <DetailsVideVisible>0</DetailsVideVisible>
-                                      <Enfants/>
-                                    </Action>
-                                  </Enfants>
-                                </operation>
-                                <operation>
-                                  <Titre>sinon</Titre>
-                                  <Enfants>
-                                    <Action>
-                                      <Position>1683;1312</Position>
-                                      <StyleLien>1</StyleLien>
-                                      <PreAssertion>?</PreAssertion>
-                                      <PostAssertion>temp</PostAssertion>
-                                      <Titre>tempMemorisation ← 10</Titre>
-                                      <DetailsVisible>0</DetailsVisible>
-                                      <DetailsVideVisible>0</DetailsVideVisible>
-                                      <Enfants/>
-                                    </Action>
-                                  </Enfants>
-                                </operation>
-                              </operationsLogiques>
-                            </Condition>
-                          </Enfants>
-                        </Action>
-                      </Enfants>
-                    </operation>
-                    <operation>
-                      <Titre>3</Titre>
-                      <Enfants>
-                        <Action>
-                          <Position>1958;1053</Position>
-                          <StyleLien>2</StyleLien>
-                          <PreAssertion>debugMode</PreAssertion>
-                          <PostAssertion>debugMode</PostAssertion>
-                          <Titre>changerDebug</Titre>
-                          <DetailsVisible>1</DetailsVisible>
-                          <DetailsVideVisible>1</DetailsVideVisible>
-                          <Enfants>
-                            <Condition>
-                              <Position>2034;1188</Position>
-                              <StyleLien>0</StyleLien>
-                              <estUnique>0</estUnique>
-                              <operationsLogiques>
-                                <operation>
-                                  <Titre>debugMode = false</Titre>
-                                  <Enfants>
-                                    <Action>
-                                      <Position>2009;1317</Position>
-                                      <StyleLien>1</StyleLien>
-                                      <PreAssertion>?</PreAssertion>
-                                      <PostAssertion>debug</PostAssertion>
-                                      <Titre>debugMode ← true</Titre>
-                                      <DetailsVisible>0</DetailsVisible>
-                                      <DetailsVideVisible>0</DetailsVideVisible>
-                                      <Enfants/>
-                                    </Action>
-                                  </Enfants>
-                                </operation>
-                                <operation>
-                                  <Titre>sinon</Titre>
-                                  <Enfants>
-                                    <Action>
-                                      <Position>2222;1317</Position>
-                                      <StyleLien>1</StyleLien>
-                                      <PreAssertion>?</PreAssertion>
-                                      <PostAssertion>debug</PostAssertion>
-                                      <Titre>debugMode ← false</Titre>
-                                      <DetailsVisible>0</DetailsVisible>
-                                      <DetailsVideVisible>0</DetailsVideVisible>
-                                      <Enfants/>
-                                    </Action>
-                                  </Enfants>
-                                </operation>
-                              </operationsLogiques>
-                            </Condition>
-                          </Enfants>
-                        </Action>
-                      </Enfants>
-                    </operation>
-                    <operation>
-                      <Titre>4</Titre>
-                      <Enfants>
-                        <Sortie>
-                          <Position>2161;822</Position>
-                        </Sortie>
-                      </Enfants>
-                    </operation>
-                    <operation>
-                      <Titre>Sinon</Titre>
-                      <Enfants>
-                        <Action>
-                          <Position>2231;790</Position>
-                          <StyleLien>1</StyleLien>
-                          <PreAssertion>messageErreur</PreAssertion>
-                          <PostAssertion>messageErreur</PostAssertion>
-                          <Titre>messageErreur ← true</Titre>
-                          <DetailsVisible>1</DetailsVisible>
-                          <DetailsVideVisible>1</DetailsVideVisible>
-                          <Enfants/>
-                        </Action>
-                      </Enfants>
-                    </operation>
-                  </operationsLogiques>
-                </ConditionMultiple>
+erreurDeSaisie</PostAssertion>
+                  <Titre>traiterChoixJoueur</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
               </Enfants>
-            </Action>
-            <Action>
-              <Position>1698;487</Position>
-              <StyleLien>1</StyleLien>
-              <PreAssertion>?</PreAssertion>
-              <PostAssertion>choix</PostAssertion>
-              <Titre>saisirChoix</Titre>
-              <DetailsVisible>0</DetailsVisible>
-              <DetailsVideVisible>0</DetailsVideVisible>
-              <Enfants/>
-            </Action>
+            </Iteration>
           </Enfants>
-        </Iteration>
-        <Action>
-          <Position>-830;238</Position>
-          <StyleLien>1</StyleLien>
-          <PreAssertion>?</PreAssertion>
-          <PostAssertion>?</PostAssertion>
-          <Titre>tailleCarre = 3
-tempMemorisation = 10
-debugMode = false
-messageErreur = false</Titre>
-          <DetailsVisible>1</DetailsVisible>
-          <DetailsVideVisible>0</DetailsVideVisible>
-          <Enfants/>
         </Action>
       </Enfants>
     </Action>
