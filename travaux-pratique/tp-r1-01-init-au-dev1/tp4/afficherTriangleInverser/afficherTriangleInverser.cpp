@@ -13,8 +13,7 @@ int main (void)
 {
     // VARIABLES
     int nbDeLignes; // La nombre de ligne saisie par l'utilisateur
-    int lignes; // c'est très utile
-    string etoile = "*"; // c'est une étoile
+    const string ETOILE = "*"; // c'est une étoile
 
     // TRAITEMENTS
     // clavier >> saisirnbDeLignes >> nbDeLignes *******************************************************
@@ -22,12 +21,12 @@ int main (void)
     cin >> nbDeLignes;
 
     // clavier >> saisiEtVerifNote >> note *************************************************
-    for (lignes = nbDeLignes; )
-    for(i = 0; nbDeLigne < lignes) 
-        cout << etoile;
-
-    // signe >> afficherMerci >> écran ******************************************************
-    cout << "Merci."<< endl;
+    for (int i = nbDeLignes; i >= 0; i--){
+        for(int j = i; j >= 0; j--){
+            cout << ETOILE;
+        }
+        cout << endl;
+    }
 
     return 0;
 }
