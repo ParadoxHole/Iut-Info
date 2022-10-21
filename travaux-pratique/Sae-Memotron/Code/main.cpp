@@ -1,9 +1,10 @@
 /*
  Programme : Memotron
  But :  Retenir un carre de chiffre et répondre au question pour avoir le meilleur score
- Date de dernière modification : 4/10/2022
+ Date de dernière modification : 19/10/2022
  Auteur : BodinMaximilien, RodriguesMatteo
- Remarques :
+ Remarques : la manière d'afficher le message d'erreur est compléxifié par un choix d'user interface
+ Nous avons voulu afficher les accents, les "cout" sont parfois un peu compliqué à lire
 */
 
 #include "game-tools.h"
@@ -21,12 +22,13 @@ int main(void)
     unsigned short int choixJoueur;      // Le choix du joueur
 
     /*jouerLaPartie*/
-    unsigned short int chiffrePairs;     // Nombre de chiffre pair du memotron
-    unsigned short int chiffreImpairs;   // Nombre de chiffre impair du memotron
-    unsigned short int centreDuCarre;    // nombre au centre du memotron
-    unsigned short int chiffrePlusGrand; // Le plus grand chiffre du memotron
-    unsigned short int chiffrePlusPetit; // Le plus petit chiffre du memotron
-    unsigned short int scoreJoueur;      // ChiffrePlusGrand
+    unsigned short int chiffrePairs;        // Nombre de chiffre pair du memotron
+    unsigned short int chiffreImpairs;      // Nombre de chiffre impair du memotron
+    unsigned short int centreDuCarre;       // nombre au centre du memotron
+    unsigned short int chiffrePlusGrand;    // Le plus grand chiffre du memotron
+    unsigned short int chiffrePlusPetit;    // Le plus petit chiffre du memotron
+    unsigned short int scoreJoueur;         // ChiffrePlusGrand
+    unsigned short int indiceCentreDuCarre; // indice du chiffre qui est au centre du carré
 
     /*afficherCarreEtCalculerQuestion*/
     unsigned short int chiffreAleatoire; // Chiffre aléatoire generer pour former le memotron
@@ -57,16 +59,37 @@ int main(void)
         afficherTexteEnCouleur("**MEMOTRON**", jaune, true);
 
         // tailleCarre >> afficherLaTailleActuel >> ecran
-        tailleCarre == 3 ? cout << "1/ Augmenter la taille du carr" << char(130) << " " << char(133) << " 5 (actuellement 3)" << endl : cout << "1/ Diminuer la taille du carr" << char(130) << " " << char(133) << " 3 (actuellement 5)" << endl;
+        if (tailleCarre == 3)
+        {
+            cout << "1/ Augmenter la taille du carre a 5 (actuellement 3)" << endl;
+        }
+        else
+        {
+            cout << "1/ Diminuer la taille du carre a 3 (actuellement 5)" << endl;
+        }
 
         // tempMemorisation >> afficherLaDureeActuel >> ecran
-        tempMemorisation == 10 ? cout << "2/ Augmenter la temps de m" << char(130) << "morisation " << char(133) << " 15s (actuellement 10s)" << endl : cout << "2/ Diminuer la temps de m" << char(130) << "morisation " << char(133) << " 10s (actuellement 15s)" << endl;
+        if (tempMemorisation == 10)
+        {
+            cout << "2/ Augmenter la temps de memorisation a 15s (actuellement 10s)" << endl;
+        }
+        else
+        {
+            cout << "2/ Diminuer la temps de memorisation a 10s (actuellement 15s)" << endl;
+        }
 
         // debugModeActif >> afficherEtatDuModeDebug >> ecran
-        debugModeActif ? cout << "3/ D" << char(130) << "sactiver le mode debug" << endl : cout << "3/ Activer le mode debug" << endl;
+        if (debugModeActif)
+        {
+            cout << "3/ Desactiver le mode debug" << endl;
+        }
+        else
+        {
+            cout << "3/ Activer le mode debug" << endl;
+        }
 
         // afficherJouer >> ecran
-        cout << "4/ Jouer\n"
+        cout << "4/ Jouer" << endl
              << endl;
 
         // erreurSaisie >> afficherMessageDerreur >> ecran, erreurSaisie
@@ -74,7 +97,7 @@ int main(void)
         {
             afficherTexteEnCouleur("Veuillez enter un chiffre entre 1 et 4 !", rouge, true);
             erreurSaisie = false;
-        }
+        } // le message d'erreur est mit avant la saisie du l'utilisateur
 
         // saisieChoixJoueur >> choixJoueur ****************************************************************************************************
         cout << "Votre choix : ";
@@ -82,11 +105,10 @@ int main(void)
         effacer();
 
         // choixJoueur >> traiterChoixJoueur >> tailleCarre, tempMemorisation, debugModeActif, erreurSaisie*************************************
-        if (choixJoueur == 4) // le giga commentaire
+        if (choixJoueur == 4)
         {
             break;
         }
-
         switch (choixJoueur)
         {
         // tailleCarre >> changerTaille >> tailleCarre
@@ -117,8 +139,9 @@ int main(void)
         // >> initialiserLesVariableDeReponse >> chiffrePairs, chiffreImpairs, centreDuCarre, chiffrePlusPetit, chiffrePlusGrand
         chiffrePairs = 0;
         chiffreImpairs = 0;
-        chiffrePlusGrand = 0;
-        chiffrePlusPetit = 0;
+        chiffrePlusGrand = 1; // initialiser au nombre le plus petit possible
+        chiffrePlusPetit = 9; // initialiser au nombre le plus grand possible
+        indiceCentreDuCarre = static_cast<unsigned short int>((tailleCarre * tailleCarre + 1) / 2);
 
         // >> afficherNomDuJeu >> ecran
         afficherTexteEnCouleur("**MEMOTRON**", jaune, true);
@@ -127,25 +150,18 @@ int main(void)
         for (int i = 1; i < (tailleCarre * tailleCarre) + 1; i++) // i est initialiser à 1 pour que le retour à la ligne se fasse correctement
         {
             // >> afficherEtGenererChiffreMemotron >> chiffreAleatoire *************************************************************************
-            chiffreAleatoire = random(1, 9);
+            chiffreAleatoire = static_cast<unsigned short int>(random(1, 9));
             cout << chiffreAleatoire << " ";
 
             // chiffrePairs, chiffreImpairs, centreDuCarre, chiffrePlusPetit, chiffrePlusGrand >> calculerQuestion >> chiffrePairs, chiffreImpairs, centreDuCarre, chiffrePlusPetit, chiffrePlusGrand
 
             // chiffreAleatoire, chiffrePairs, chiffreImpairs >> associerPairImpair >> chiffrePairs, chiffreImpairs
-            chiffreAleatoire % 2 == 0 ? chiffrePairs += 1 : chiffreImpairs += 1;
+            chiffreAleatoire % 2 == 0 ? chiffrePairs++ : chiffreImpairs++;
 
             // i, tailleCarre, chiffreAleatoire, centreDuCarre >> trouverChiffreAuCentre >> centreDuCarre
-            if (i == (tailleCarre * tailleCarre + 1) / 2)
+            if (i == indiceCentreDuCarre)
             {
                 centreDuCarre = chiffreAleatoire;
-            }
-            
-            // i >> initaliserAuPremierPassage >> chiffrePlusGrand, chiffrePlusPetit
-            if (i == 1)
-            {
-                chiffrePlusGrand = chiffreAleatoire;
-                chiffrePlusPetit = chiffreAleatoire;
             }
 
             // chiffreAleatoire,chiffrePlusGrand >> trouverChiffrePlusGrand >> chiffrePlusGrand
@@ -163,24 +179,26 @@ int main(void)
             // i, tailleCarre >> retourALaLigne >> ecran ***************************************************************************************
             if (i % tailleCarre == 0)
             {
-                cout << "\n";
+                cout << endl;
             }
         }
 
         // scoreJoueur >> affciherScoreActuel >> ecran ******************************************************************************************
-        cout << "\nVotre score actuel: " << scoreJoueur << endl
-             << "\n";
+        cout << endl
+             << "Votre score actuel: " << scoreJoueur << endl
+             << endl;
 
         // tempMemorisation, debugModeActif >> lancerLeCompteARebours >> ecran ***********************************************************************************
         if (!debugModeActif)
         {
-            afficherTexteEnCouleur("\nCompte a rebours: ", rouge, false);
+            cout << endl;
+            afficherTexteEnCouleur("Compte a rebours: ", rouge, false);
 
             for (short int i = tempMemorisation; i >= 0; i--)
             {
                 afficherNombreEnCouleur(i, rouge, false);
                 cout << " ";
-                Sleep(1000);
+                pause(1);
             }
 
             effacer();
@@ -188,34 +206,34 @@ int main(void)
 
         // chiffrePairs, chiffreImpairs, centreDuCarre, chiffrePlusPetit, chiffrePlusGrand, score >> gererQuestion >> scoreJoueur ***************
         // >> choisirUneQuestionAuHazard >> numQuestionAleatoire
-        numQuestionAleatoire = random(1, 5);
+        numQuestionAleatoire = static_cast<unsigned short int>(random(1, 5));
 
         // chiffrePairs, chiffreImpairs, centreDuCarre, chiffrePlusPetit, chiffrePlusGrand, numQuestionAleatoire >> DeterminerEtAfficherQuestion >>bonneReponse
         switch (numQuestionAleatoire)
         {
         case 1:
             // Question 1
-            cout << "Quel " << char(130) << "tait le chiffre au centre du carr" << char(130) << " ? ";
+            cout << "Quel etait le chiffre au centre du carre ? ";
             bonneReponse = centreDuCarre;
             break;
         case 2:
             // Question 2
-            cout << "Quel " << char(130) << "tait le chiffre le plus grand pr" << char(130) << "sent dans le carr" << char(130) << " ? ";
+            cout << "Quel etait le chiffre le plus grand present dans le carre ? ";
             bonneReponse = chiffrePlusGrand;
             break;
         case 3:
             // Question 3
-            cout << "Quel " << char(130) << "tait le chiffre le plus petit pr" << char(130) << "sent dans le carr" << char(130) << " ? ";
+            cout << "Quel etait le chiffre le plus petit present dans le carre ? ";
             bonneReponse = chiffrePlusPetit;
             break;
         case 4:
             // Question 4
-            cout << "Combien y avait-il de chiffres pairs dans le carr" << char(130) << " ? ";
+            cout << "Combien y avait-il de chiffres pairs dans le carre ? ";
             bonneReponse = chiffrePairs;
             break;
         case 5:
             // Question 5
-            cout << "Combien y avait-il de chiffres impairs dans le carr" << char(130) << " ? ";
+            cout << "Combien y avait-il de chiffres impairs dans le carre ? ";
             bonneReponse = chiffreImpairs;
             break;
         }
@@ -227,18 +245,20 @@ int main(void)
         if (reponseJoueur == bonneReponse)
         {
             // scoreJoueur >> incrementerScoreJoueur >> scoreJoueur
-            scoreJoueur += 1;
+            scoreJoueur++;
 
             // scoreJoueur >> afficherReponseEtScore >> ecran
-            afficherTexteEnCouleur("\nBonne reponse !", vert, true);
+            cout << endl;
+            afficherTexteEnCouleur("Bonne reponse !", vert, true);
             cout << "Votre nouveau score est " << scoreJoueur << endl;
-            Sleep(2000); // l'écran reste visible 2 secondes
+            pause(2); // l'écran reste visible 2 secondes
             effacer();
         }
     } while (reponseJoueur == bonneReponse);
 
     // scoreJoueur, bonneReponse >> FinaliserLaPartie
-    afficherTexteEnCouleur("\nVous avez perdu, la reponse attendue etait ", rouge, false);
+    cout << endl;
+    afficherTexteEnCouleur("Vous avez perdu, la reponse attendue etait ", rouge, false);
     afficherNombreEnCouleur(bonneReponse, rouge, true);
     cout << "Votre score final est " << scoreJoueur << endl;
 
