@@ -2,21 +2,21 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>traiterChoix</nom>
-  <date_creation>5/10/2022 22:59</date_creation>
+  <date_creation>19/10/2022 23:19</date_creation>
   <Elements>
     <Action>
-      <Position>688;439</Position>
+      <Position>655;442</Position>
       <StyleLien>2</StyleLien>
       <PreAssertion>choixJoueur</PreAssertion>
       <PostAssertion>tailleCarre,debugMode,
 tempMemorisation,
 erreurDeSaisie</PostAssertion>
-      <Titre>traiterChoix</Titre>
+      <Titre>traiterChoixJoueur</Titre>
       <DetailsVisible>1</DetailsVisible>
       <DetailsVideVisible>1</DetailsVideVisible>
       <Enfants>
         <ConditionMultiple>
-          <Position>785;584</Position>
+          <Position>782;576</Position>
           <StyleLien>0</StyleLien>
           <Titre>choixJoueur</Titre>
           <operationsLogiques>

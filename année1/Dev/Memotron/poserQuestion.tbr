@@ -2,17 +2,17 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>poserQuestion</nom>
-  <date_creation>5/10/2022 22:56</date_creation>
+  <date_creation>19/10/2022 23:25</date_creation>
   <Elements>
     <Action>
-      <Position>407;311</Position>
+      <Position>392;311</Position>
       <StyleLien>2</StyleLien>
       <PreAssertion>chiffrePair,chiffreImpair,
-centreDuCarre,
-chiffrePLusPetit
-chiffrePlusGrand,score</PreAssertion>
+chiffrePLusPetit,
+chiffrePlusGrand,
+centreDuCarre,scoreJoueur</PreAssertion>
       <PostAssertion>scoreJoueur</PostAssertion>
-      <Titre>poserQuestion</Titre>
+      <Titre>gererQuestion</Titre>
       <DetailsVisible>1</DetailsVisible>
       <DetailsVideVisible>1</DetailsVideVisible>
       <Enfants>
@@ -118,7 +118,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                       <DetailsVideVisible>0</DetailsVideVisible>
                       <Enfants>
                         <Action>
-                          <Position>660;1126</Position>
+                          <Position>660;1127</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -164,7 +164,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                           <Enfants/>
                         </Action>
                         <Action>
-                          <Position>895;1234</Position>
+                          <Position>896;1233</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -181,7 +181,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                   <Titre>5</Titre>
                   <Enfants>
                     <Action>
-                      <Position>1511;1011</Position>
+                      <Position>1511;1009</Position>
                       <StyleLien>2</StyleLien>
                       <PreAssertion>?</PreAssertion>
                       <PostAssertion>?</PostAssertion>
@@ -190,7 +190,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                       <DetailsVideVisible>0</DetailsVideVisible>
                       <Enfants>
                         <Action>
-                          <Position>1535;1133</Position>
+                          <Position>1535;1132</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -219,7 +219,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
         </Action>
         <Action>
           <Position>-414;526</Position>
-          <StyleLien>2</StyleLien>
+          <StyleLien>0</StyleLien>
           <PreAssertion>?</PreAssertion>
           <PostAssertion>numQuestionAleatoire</PostAssertion>
           <Titre>choisirUneQuestionAuHazard</Titre>
@@ -227,7 +227,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
           <DetailsVideVisible>0</DetailsVideVisible>
           <Enfants>
             <Action>
-              <Position>-451;674</Position>
+              <Position>-453;663</Position>
               <StyleLien>1</StyleLien>
               <PreAssertion>?</PreAssertion>
               <PostAssertion>questionAleatoire</PostAssertion>
@@ -261,7 +261,7 @@ scoreJoueur</PreAssertion>
           <Enfants>
             <Condition>
               <Position>2099;666</Position>
-              <StyleLien>0</StyleLien>
+              <StyleLien>1</StyleLien>
               <estUnique>0</estUnique>
               <operationsLogiques>
                 <operation>
@@ -281,7 +281,7 @@ scoreJoueur</PreAssertion>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
-                          <Titre>Afficher: "Bonne Reponse !"</Titre>
+                          <Titre>Afficher: "Bonne reponse !"</Titre>
                           <DetailsVisible>1</DetailsVisible>
                           <DetailsVideVisible>0</DetailsVideVisible>
                           <Enfants/>
@@ -308,7 +308,7 @@ scoreJoueur</PreAssertion>
                       <DetailsVideVisible>1</DetailsVideVisible>
                       <Enfants>
                         <Action>
-                          <Position>1716;950</Position>
+                          <Position>1716;949</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>

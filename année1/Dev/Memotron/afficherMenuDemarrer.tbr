@@ -2,7 +2,7 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>afficherMenuDemarrer</nom>
-  <date_creation>5/10/2022 23:25</date_creation>
+  <date_creation>19/10/2022 23:18</date_creation>
   <Elements>
     <Action>
       <Position>540;465</Position>

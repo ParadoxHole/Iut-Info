@@ -2,12 +2,15 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>afficherCarre</nom>
-  <date_creation>5/10/2022 23:07</date_creation>
+  <date_creation>21/10/2022 00:06</date_creation>
   <Elements>
     <Action>
-      <Position>586;216</Position>
+      <Position>440;217</Position>
       <StyleLien>2</StyleLien>
-      <PreAssertion>tailleCarre</PreAssertion>
+      <PreAssertion>chiffrePair,chiffreImpair,
+centreDuCarre,
+chiffrePLusPetit,
+chiffrePlusGrand,tailleCarre</PreAssertion>
       <PostAssertion>chiffrePair,chiffreImpair,
 centreDuCarre,
 chiffrePLusPetit,
@@ -23,7 +26,7 @@ chiffrePlusGrand</PostAssertion>
           <IterationFixe>1</IterationFixe>
           <Enfants>
             <Action>
-              <Position>620;492</Position>
+              <Position>565;488</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>chiffreAleatoire,
 centreDuCarre,
@@ -38,7 +41,7 @@ chiffrePlusGrand</PostAssertion>
               <DetailsVideVisible>1</DetailsVideVisible>
               <Enfants>
                 <Action>
-                  <Position>-289;769</Position>
+                  <Position>-289;770</Position>
                   <StyleLien>2</StyleLien>
                   <PreAssertion>chiffreAleatoire,
 chiffrePairs,
@@ -134,7 +137,7 @@ chiffrePlusGrand</PreAssertion>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants>
                     <Condition>
-                      <Position>1014;908</Position>
+                      <Position>1011;906</Position>
                       <StyleLien>1</StyleLien>
                       <estUnique>1</estUnique>
                       <operationsLogiques>
@@ -142,7 +145,7 @@ chiffrePlusGrand</PreAssertion>
                           <Titre>chiffrePlusGrand &lt; chiffreAleatoire</Titre>
                           <Enfants>
                             <Action>
-                              <Position>1022;1036</Position>
+                              <Position>1019;1021</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>∅</PreAssertion>
                               <PostAssertion>∅</PostAssertion>
@@ -162,7 +165,7 @@ chiffrePlusGrand</PreAssertion>
                   </Enfants>
                 </Action>
                 <Action>
-                  <Position>1568;765</Position>
+                  <Position>1611;776</Position>
                   <StyleLien>2</StyleLien>
                   <PreAssertion>chiffreAleatoire,
 chiffrePlusPetit</PreAssertion>
@@ -172,7 +175,7 @@ chiffrePlusPetit</PreAssertion>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants>
                     <Condition>
-                      <Position>1693;902</Position>
+                      <Position>1740;903</Position>
                       <StyleLien>1</StyleLien>
                       <estUnique>1</estUnique>
                       <operationsLogiques>
@@ -180,7 +183,7 @@ chiffrePlusPetit</PreAssertion>
                           <Titre>chiffrePlusPetit > chiffreAleatoire</Titre>
                           <Enfants>
                             <Action>
-                              <Position>1700;1022</Position>
+                              <Position>1722;1007</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>∅</PreAssertion>
                               <PostAssertion>∅</PostAssertion>
@@ -243,7 +246,7 @@ tailleCarre</PreAssertion>
               <DetailsVideVisible>0</DetailsVideVisible>
               <Enfants>
                 <Condition>
-                  <Position>2305;658</Position>
+                  <Position>2309;634</Position>
                   <StyleLien>1</StyleLien>
                   <estUnique>1</estUnique>
                   <operationsLogiques>
@@ -251,7 +254,7 @@ tailleCarre</PreAssertion>
                       <Titre>i % tailleCarre = 0</Titre>
                       <Enfants>
                         <Action>
-                          <Position>2327;771</Position>
+                          <Position>2291;750</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>∅</PreAssertion>
                           <PostAssertion>∅</PostAssertion>

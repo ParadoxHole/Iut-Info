@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>jouerLaPartie</nom>
+  <date_creation>20/10/2022 23:28</date_creation>
+  <Elements>
+    <Action>
+      <Position>377;279</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>scoreJoueur, tailleCarre,
+tempMemorisation,
+debugModeActif,</PreAssertion>
+      <PostAssertion>scoreJoueur,
+bonneReponse</PostAssertion>
+      <Titre>jouerLaPartie</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Iteration>
+          <Position>690.5;409.5</Position>
+          <StyleLien>1</StyleLien>
+          <Titre>?</Titre>
+          <IterationFixe>0</IterationFixe>
+          <Enfants>
+            <Action>
+              <Position>236;586</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>chiffrePair,chiffreImpair,
+centreDuCarre,
+chiffrePLusPetit,
+chiffrePlusGrand,tailleCarre</PreAssertion>
+              <PostAssertion>chiffrePair, chiffreImpair,
+centreDuCarre,
+chiffrePLusPetit,
+chiffrePlusGrand</PostAssertion>
+              <Titre>afficherCarre</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants/>
+            </Action>
+            <Action>
+              <Position>1913;578</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>chiffrePair,chiffreImpair,
+chiffrePLusPetit,
+chiffrePlusGrand,
+centreDuCarre,scoreJoueur</PreAssertion>
+              <PostAssertion>scoreJoueur,
+bonneReponse</PostAssertion>
+              <Titre>gererQuestion</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants/>
+            </Action>
+            <Action>
+              <Position>1399;579</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>tempMemorisation,
+debugModeActif</PreAssertion>
+              <PostAssertion>?</PostAssertion>
+              <Titre>lancerLeCompteARebours</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>0</DetailsVideVisible>
+              <Enfants>
+                <Condition>
+                  <Position>1647;727</Position>
+                  <StyleLien>1</StyleLien>
+                  <estUnique>1</estUnique>
+                  <operationsLogiques>
+                    <operation>
+                      <Titre>debugModeActif</Titre>
+                      <Enfants>
+                        <Action>
+                          <Position>1377;855</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>?</PreAssertion>
+                          <PostAssertion>?</PostAssertion>
+                          <Titre>Afficher: "Compte à rebours: "</Titre>
+                          <DetailsVisible>1</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                        <Action>
+                          <Position>1978;853</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>?</PreAssertion>
+                          <PostAssertion>?</PostAssertion>
+                          <Titre>Effacer le terminal</Titre>
+                          <DetailsVisible>1</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                        <Iteration>
+                          <Position>1721.5;880.5</Position>
+                          <StyleLien>1</StyleLien>
+                          <Titre>Pour i de tempMemo à 0</Titre>
+                          <IterationFixe>1</IterationFixe>
+                          <Enfants>
+                            <Action>
+                              <Position>1623;975</Position>
+                              <StyleLien>1</StyleLien>
+                              <PreAssertion>?</PreAssertion>
+                              <PostAssertion>?</PostAssertion>
+                              <Titre>Afficher: i</Titre>
+                              <DetailsVisible>1</DetailsVisible>
+                              <DetailsVideVisible>0</DetailsVideVisible>
+                              <Enfants/>
+                            </Action>
+                            <Action>
+                              <Position>1738;975</Position>
+                              <StyleLien>1</StyleLien>
+                              <PreAssertion>∅</PreAssertion>
+                              <PostAssertion>∅</PostAssertion>
+                              <Titre>Attendre 1 seconde</Titre>
+                              <DetailsVisible>0</DetailsVisible>
+                              <DetailsVideVisible>1</DetailsVideVisible>
+                              <Enfants/>
+                            </Action>
+                          </Enfants>
+                        </Iteration>
+                      </Enfants>
+                    </operation>
+                    <operation>
+                      <Titre>Sinon</Titre>
+                      <Enfants/>
+                    </operation>
+                  </operationsLogiques>
+                </Condition>
+              </Enfants>
+            </Action>
+            <Action>
+              <Position>976;586</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>scoreJoueur</PreAssertion>
+              <PostAssertion>?</PostAssertion>
+              <Titre>afficherScoreActuel</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>0</DetailsVideVisible>
+              <Enfants>
+                <Action>
+                  <Position>1048;727</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>∅</PreAssertion>
+                  <PostAssertion>∅</PostAssertion>
+                  <Titre>Afficher: "Votre score actuel : ",score</Titre>
+                  <DetailsVisible>0</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Action>
+            <Action>
+              <Position>-779;584</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>tailleCarre</PreAssertion>
+              <PostAssertion>chiffrePair, chiffreImpair,
+centreDuCarre,chiffrePLusPetit,
+chiffrePlusGrand,
+indiceDuCentreDuCarre</PostAssertion>
+              <Titre>initialiserLesVariableDeReponse</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants>
+                <Action>
+                  <Position>-800;721</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>∅</PreAssertion>
+                  <PostAssertion>∅</PostAssertion>
+                  <Titre>chiffrePairs ← 0
+chiffreImpairs ← 0</Titre>
+                  <DetailsVisible>0</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>-607;719</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>∅</PreAssertion>
+                  <PostAssertion>∅</PostAssertion>
+                  <Titre>chiffrePlusGrand ← 0
+chiffrePlusGrand ← 9</Titre>
+                  <DetailsVisible>0</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>-394;719</Position>
+                  <StyleLien>2</StyleLien>
+                  <PreAssertion>∅</PreAssertion>
+                  <PostAssertion>∅</PostAssertion>
+                  <Titre>calculerIndiceDuCentreDuCarre</Titre>
+                  <DetailsVisible>0</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants>
+                    <Action>
+                      <Position>-449;837</Position>
+                      <StyleLien>1</StyleLien>
+                      <PreAssertion>∅</PreAssertion>
+                      <PostAssertion>∅</PostAssertion>
+                      <Titre>indiceDuCentreDuCarre ← (tailleCarre²+1)/2</Titre>
+                      <DetailsVisible>0</DetailsVisible>
+                      <DetailsVideVisible>1</DetailsVideVisible>
+                      <Enfants/>
+                    </Action>
+                  </Enfants>
+                </Action>
+              </Enfants>
+            </Action>
+            <Action>
+              <Position>-9;589</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>∅</PreAssertion>
+              <PostAssertion>∅</PostAssertion>
+              <Titre>afficherNomDuJeu</Titre>
+              <DetailsVisible>0</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants>
+                <Action>
+                  <Position>-51;710</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>Afficher "** MEMOTRON **"</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Action>
+          </Enfants>
+        </Iteration>
+      </Enfants>
+    </Action>
+  </Elements>
+  <Dictionary/>
+</Algorithme>
