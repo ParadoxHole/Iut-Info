@@ -2,10 +2,10 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>afficherCarreEtAssignerResultat</nom>
-  <date_creation>24/10/2022 01:12</date_creation>
+  <date_creation>25/10/2022 07:05</date_creation>
   <Elements>
     <Action>
-      <Position>410;232</Position>
+      <Position>412;234</Position>
       <StyleLien>2</StyleLien>
       <PreAssertion>tailleCarre,
 indiceCentreDuCarre</PreAssertion>
@@ -20,7 +20,7 @@ chiffrePlusGrand</PostAssertion>
         <Iteration>
           <Position>774.5;353.5</Position>
           <StyleLien>1</StyleLien>
-          <Titre>pour i de 0 à tailleCarre²</Titre>
+          <Titre>pour i de 1 à tailleCarre² +1</Titre>
           <IterationFixe>1</IterationFixe>
           <Enfants>
             <Action>
@@ -51,7 +51,7 @@ chiffreImpairs</PostAssertion>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants>
                     <Condition>
-                      <Position>-177;908</Position>
+                      <Position>-177;896</Position>
                       <StyleLien>0</StyleLien>
                       <estUnique>0</estUnique>
                       <operationsLogiques>
@@ -59,7 +59,7 @@ chiffreImpairs</PostAssertion>
                           <Titre>chiffreAleatoire%2=0</Titre>
                           <Enfants>
                             <Action>
-                              <Position>-289;1029</Position>
+                              <Position>-268;1022</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>?</PostAssertion>
@@ -74,7 +74,7 @@ chiffreImpairs</PostAssertion>
                           <Titre>Sinon</Titre>
                           <Enfants>
                             <Action>
-                              <Position>6;1030</Position>
+                              <Position>11;1023</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>?</PostAssertion>
@@ -100,7 +100,7 @@ indiceCentreDuCarre,</PreAssertion>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants>
                     <Condition>
-                      <Position>488;910</Position>
+                      <Position>495;900</Position>
                       <StyleLien>0</StyleLien>
                       <estUnique>0</estUnique>
                       <operationsLogiques>
@@ -108,7 +108,7 @@ indiceCentreDuCarre,</PreAssertion>
                           <Titre>i = indiceCentreDuCarre</Titre>
                           <Enfants>
                             <Action>
-                              <Position>459;1028</Position>
+                              <Position>464;1023</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>?</PostAssertion>
@@ -124,7 +124,7 @@ indiceCentreDuCarre,</PreAssertion>
                   </Enfants>
                 </Action>
                 <Action>
-                  <Position>933;769</Position>
+                  <Position>946;770</Position>
                   <StyleLien>2</StyleLien>
                   <PreAssertion>chiffreAleatoire,
 chiffrePlusGrand</PreAssertion>
@@ -134,15 +134,15 @@ chiffrePlusGrand</PreAssertion>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants>
                     <Condition>
-                      <Position>1065;899</Position>
-                      <StyleLien>1</StyleLien>
-                      <estUnique>1</estUnique>
+                      <Position>1083;906</Position>
+                      <StyleLien>0</StyleLien>
+                      <estUnique>0</estUnique>
                       <operationsLogiques>
                         <operation>
                           <Titre>chiffrePlusGrand &lt; chiffreAleatoire</Titre>
                           <Enfants>
                             <Action>
-                              <Position>1075;1022</Position>
+                              <Position>1092;1021</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>∅</PreAssertion>
                               <PostAssertion>∅</PostAssertion>
@@ -153,16 +153,12 @@ chiffrePlusGrand</PreAssertion>
                             </Action>
                           </Enfants>
                         </operation>
-                        <operation>
-                          <Titre>Sinon</Titre>
-                          <Enfants/>
-                        </operation>
                       </operationsLogiques>
                     </Condition>
                   </Enfants>
                 </Action>
                 <Action>
-                  <Position>1659;777</Position>
+                  <Position>1597;771</Position>
                   <StyleLien>2</StyleLien>
                   <PreAssertion>chiffreAleatoire,
 chiffrePlusPetit</PreAssertion>
@@ -172,15 +168,15 @@ chiffrePlusPetit</PreAssertion>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants>
                     <Condition>
-                      <Position>1787;911</Position>
-                      <StyleLien>1</StyleLien>
-                      <estUnique>1</estUnique>
+                      <Position>1725;900</Position>
+                      <StyleLien>0</StyleLien>
+                      <estUnique>0</estUnique>
                       <operationsLogiques>
                         <operation>
                           <Titre>chiffrePlusPetit > chiffreAleatoire</Titre>
                           <Enfants>
                             <Action>
-                              <Position>1791;1018</Position>
+                              <Position>1736;1018</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>∅</PreAssertion>
                               <PostAssertion>∅</PostAssertion>
@@ -191,10 +187,6 @@ chiffrePlusPetit</PreAssertion>
                             </Action>
                           </Enfants>
                         </operation>
-                        <operation>
-                          <Titre>chiffrePlusGrand &lt; chiffreAleatoire</Titre>
-                          <Enfants/>
-                        </operation>
                       </operationsLogiques>
                     </Condition>
                   </Enfants>
@@ -202,7 +194,7 @@ chiffrePlusPetit</PreAssertion>
               </Enfants>
             </Action>
             <Action>
-              <Position>-613;482</Position>
+              <Position>-594;482</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>?</PreAssertion>
               <PostAssertion>chiffreAleatoire</PostAssertion>
@@ -211,17 +203,17 @@ chiffrePlusPetit</PreAssertion>
               <DetailsVideVisible>0</DetailsVideVisible>
               <Enfants>
                 <Action>
-                  <Position>-838;620</Position>
+                  <Position>-703;618</Position>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>?</PreAssertion>
-                  <PostAssertion>chiffreAleatoire</PostAssertion>
+                  <PostAssertion>?</PostAssertion>
                   <Titre>chiffreAleatoire← random(1,9)</Titre>
                   <DetailsVisible>1</DetailsVisible>
                   <DetailsVideVisible>0</DetailsVideVisible>
                   <Enfants/>
                 </Action>
                 <Action>
-                  <Position>-351;619</Position>
+                  <Position>-403;619</Position>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>?</PreAssertion>
                   <PostAssertion>?</PostAssertion>
@@ -233,7 +225,7 @@ chiffrePlusPetit</PreAssertion>
               </Enfants>
             </Action>
             <Action>
-              <Position>2200;491</Position>
+              <Position>2200;489</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>i,
 tailleCarre</PreAssertion>
@@ -243,7 +235,7 @@ tailleCarre</PreAssertion>
               <DetailsVideVisible>0</DetailsVideVisible>
               <Enfants>
                 <Condition>
-                  <Position>2311;620</Position>
+                  <Position>2310;617</Position>
                   <StyleLien>0</StyleLien>
                   <estUnique>0</estUnique>
                   <operationsLogiques>
@@ -251,7 +243,7 @@ tailleCarre</PreAssertion>
                       <Titre>i % tailleCarre = 0</Titre>
                       <Enfants>
                         <Action>
-                          <Position>2334;738</Position>
+                          <Position>2329;738</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>∅</PreAssertion>
                           <PostAssertion>∅</PostAssertion>

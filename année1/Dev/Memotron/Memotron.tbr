@@ -2,10 +2,10 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>Memotron</nom>
-  <date_creation>24/10/2022 01:41</date_creation>
+  <date_creation>25/10/2022 07:08</date_creation>
   <Elements>
     <Action>
-      <Position>861;421</Position>
+      <Position>894;440</Position>
       <StyleLien>2</StyleLien>
       <PreAssertion>?</PreAssertion>
       <PostAssertion>?</PostAssertion>
@@ -14,23 +14,23 @@
       <DetailsVideVisible>0</DetailsVideVisible>
       <Enfants>
         <Action>
-          <Position>81;608</Position>
+          <Position>60;606</Position>
           <StyleLien>1</StyleLien>
           <PreAssertion>?</PreAssertion>
           <PostAssertion>scoreJoueur, tailleCarre,
 tempMemorisation,
-debugModeActif,</PostAssertion>
+debugModeActif</PostAssertion>
           <Titre>initialiserLaPartie</Titre>
           <DetailsVisible>1</DetailsVisible>
           <DetailsVideVisible>0</DetailsVideVisible>
           <Enfants/>
         </Action>
         <Action>
-          <Position>587;608</Position>
+          <Position>620;608</Position>
           <StyleLien>1</StyleLien>
           <PreAssertion>scoreJoueur, tailleCarre,
 tempMemorisation,
-debugModeActif,</PreAssertion>
+debugModeActif</PreAssertion>
           <PostAssertion>scoreJoueur,
 bonneReponse</PostAssertion>
           <Titre>jouerLaPartie</Titre>

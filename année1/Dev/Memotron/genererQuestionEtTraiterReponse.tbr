@@ -1,23 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
-  <nom>poserQuestion</nom>
-  <date_creation>19/10/2022 23:25</date_creation>
+  <nom>genererQuestionEtTraiterReponse</nom>
+  <date_creation>25/10/2022 07:32</date_creation>
   <Elements>
     <Action>
-      <Position>392;311</Position>
+      <Position>299;316</Position>
       <StyleLien>2</StyleLien>
       <PreAssertion>chiffrePair,chiffreImpair,
 chiffrePLusPetit,
 chiffrePlusGrand,
 centreDuCarre,scoreJoueur</PreAssertion>
-      <PostAssertion>scoreJoueur</PostAssertion>
-      <Titre>gererQuestion</Titre>
+      <PostAssertion>scoreJoueur,
+bonneReponse</PostAssertion>
+      <Titre>genererQuestionEtTraiterReponse</Titre>
       <DetailsVisible>1</DetailsVisible>
       <DetailsVideVisible>1</DetailsVideVisible>
       <Enfants>
         <Action>
-          <Position>316;527</Position>
+          <Position>318;478</Position>
           <StyleLien>2</StyleLien>
           <PreAssertion>chiffrePair,chiffreImpair,
 centreDuCarre,
@@ -29,7 +30,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
           <DetailsVideVisible>1</DetailsVideVisible>
           <Enfants>
             <ConditionMultiple>
-              <Position>621;671</Position>
+              <Position>619;616</Position>
               <StyleLien>0</StyleLien>
               <Titre>numQuestionAleatoire</Titre>
               <operationsLogiques>
@@ -37,16 +38,17 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                   <Titre>1</Titre>
                   <Enfants>
                     <Action>
-                      <Position>-256;999</Position>
+                      <Position>-491;999</Position>
                       <StyleLien>2</StyleLien>
-                      <PreAssertion>?</PreAssertion>
-                      <PostAssertion>?</PostAssertion>
+                      <PreAssertion>centreDuCarre,
+bonneReponse</PreAssertion>
+                      <PostAssertion>bonneReponse</PostAssertion>
                       <Titre>Question1</Titre>
                       <DetailsVisible>1</DetailsVisible>
-                      <DetailsVideVisible>0</DetailsVideVisible>
+                      <DetailsVideVisible>1</DetailsVideVisible>
                       <Enfants>
                         <Action>
-                          <Position>-299;1226</Position>
+                          <Position>-216;1226</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -56,7 +58,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                           <Enfants/>
                         </Action>
                         <Action>
-                          <Position>-569;1126</Position>
+                          <Position>-486;1126</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -73,16 +75,17 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                   <Titre>2</Titre>
                   <Enfants>
                     <Action>
-                      <Position>154;985</Position>
+                      <Position>4;1000</Position>
                       <StyleLien>2</StyleLien>
-                      <PreAssertion>?</PreAssertion>
-                      <PostAssertion>?</PostAssertion>
+                      <PreAssertion>chiffrePlusGrand,
+bonneReponse</PreAssertion>
+                      <PostAssertion>bonneReponse</PostAssertion>
                       <Titre>Question2</Titre>
                       <DetailsVisible>1</DetailsVisible>
-                      <DetailsVideVisible>0</DetailsVideVisible>
+                      <DetailsVideVisible>1</DetailsVideVisible>
                       <Enfants>
                         <Action>
-                          <Position>-107;1117</Position>
+                          <Position>-51;1125</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -92,7 +95,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                           <Enfants/>
                         </Action>
                         <Action>
-                          <Position>150;1228</Position>
+                          <Position>205;1224</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -109,16 +112,17 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                   <Titre>3</Titre>
                   <Enfants>
                     <Action>
-                      <Position>671;1002</Position>
+                      <Position>513;1001</Position>
                       <StyleLien>2</StyleLien>
-                      <PreAssertion>?</PreAssertion>
-                      <PostAssertion>?</PostAssertion>
+                      <PreAssertion>chiffrePlusPetit,
+bonneReponse</PreAssertion>
+                      <PostAssertion>bonneReponse</PostAssertion>
                       <Titre>Question3</Titre>
                       <DetailsVisible>1</DetailsVisible>
-                      <DetailsVideVisible>0</DetailsVideVisible>
+                      <DetailsVideVisible>1</DetailsVideVisible>
                       <Enfants>
                         <Action>
-                          <Position>660;1127</Position>
+                          <Position>719;1128</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -128,7 +132,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                           <Enfants/>
                         </Action>
                         <Action>
-                          <Position>489;1224</Position>
+                          <Position>542;1225</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -145,16 +149,17 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                   <Titre>4</Titre>
                   <Enfants>
                     <Action>
-                      <Position>1059;998</Position>
+                      <Position>1010;1001</Position>
                       <StyleLien>2</StyleLien>
-                      <PreAssertion>?</PreAssertion>
-                      <PostAssertion>?</PostAssertion>
+                      <PreAssertion>nombreDeChiffrePairs,
+bonneReponse</PreAssertion>
+                      <PostAssertion>bonneReponse</PostAssertion>
                       <Titre>Question4</Titre>
                       <DetailsVisible>1</DetailsVisible>
-                      <DetailsVideVisible>0</DetailsVideVisible>
+                      <DetailsVideVisible>1</DetailsVideVisible>
                       <Enfants>
                         <Action>
-                          <Position>1100;1128</Position>
+                          <Position>1193;1126</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -164,7 +169,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                           <Enfants/>
                         </Action>
                         <Action>
-                          <Position>896;1233</Position>
+                          <Position>989;1231</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -181,16 +186,17 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                   <Titre>5</Titre>
                   <Enfants>
                     <Action>
-                      <Position>1511;1009</Position>
+                      <Position>1573;1001</Position>
                       <StyleLien>2</StyleLien>
-                      <PreAssertion>?</PreAssertion>
-                      <PostAssertion>?</PostAssertion>
+                      <PreAssertion>nombreDeChiffreImpairs,
+bonneReponse</PreAssertion>
+                      <PostAssertion>bonneReponse</PostAssertion>
                       <Titre>Question5</Titre>
                       <DetailsVisible>1</DetailsVisible>
-                      <DetailsVideVisible>0</DetailsVideVisible>
+                      <DetailsVideVisible>1</DetailsVideVisible>
                       <Enfants>
                         <Action>
-                          <Position>1535;1132</Position>
+                          <Position>1747;1131</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -200,7 +206,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
                           <Enfants/>
                         </Action>
                         <Action>
-                          <Position>1326;1239</Position>
+                          <Position>1535;1230</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -218,7 +224,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
           </Enfants>
         </Action>
         <Action>
-          <Position>-414;526</Position>
+          <Position>-411;480</Position>
           <StyleLien>0</StyleLien>
           <PreAssertion>?</PreAssertion>
           <PostAssertion>numQuestionAleatoire</PostAssertion>
@@ -227,7 +233,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
           <DetailsVideVisible>0</DetailsVideVisible>
           <Enfants>
             <Action>
-              <Position>-453;663</Position>
+              <Position>-453;633</Position>
               <StyleLien>1</StyleLien>
               <PreAssertion>?</PreAssertion>
               <PostAssertion>questionAleatoire</PostAssertion>
@@ -239,7 +245,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
           </Enfants>
         </Action>
         <Action>
-          <Position>1269;536</Position>
+          <Position>1274;471</Position>
           <StyleLien>1</StyleLien>
           <PreAssertion>?</PreAssertion>
           <PostAssertion>reponseJoueur</PostAssertion>
@@ -249,7 +255,7 @@ chiffrePLusPetit,chiffrePlusGrand</PreAssertion>
           <Enfants/>
         </Action>
         <Action>
-          <Position>2044;532</Position>
+          <Position>2036;476</Position>
           <StyleLien>2</StyleLien>
           <PreAssertion>reponseJoueur,
 bonneReponse,
@@ -260,7 +266,7 @@ scoreJoueur</PreAssertion>
           <DetailsVideVisible>1</DetailsVideVisible>
           <Enfants>
             <Condition>
-              <Position>2099;666</Position>
+              <Position>2092;596</Position>
               <StyleLien>1</StyleLien>
               <estUnique>0</estUnique>
               <operationsLogiques>
@@ -268,16 +274,16 @@ scoreJoueur</PreAssertion>
                   <Titre>reponseJoueur = bonneReponse</Titre>
                   <Enfants>
                     <Action>
-                      <Position>2146;804</Position>
+                      <Position>2219;725</Position>
                       <StyleLien>2</StyleLien>
                       <PreAssertion>scoreJoueur</PreAssertion>
                       <PostAssertion>?</PostAssertion>
-                      <Titre>afficherRepEtScore</Titre>
+                      <Titre>afficherReponseEtScore</Titre>
                       <DetailsVisible>0</DetailsVisible>
                       <DetailsVideVisible>0</DetailsVideVisible>
                       <Enfants>
                         <Action>
-                          <Position>2032;948</Position>
+                          <Position>2105;869</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -287,7 +293,7 @@ scoreJoueur</PreAssertion>
                           <Enfants/>
                         </Action>
                         <Action>
-                          <Position>2299;948</Position>
+                          <Position>2372;869</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -299,7 +305,7 @@ scoreJoueur</PreAssertion>
                       </Enfants>
                     </Action>
                     <Action>
-                      <Position>1598;804</Position>
+                      <Position>1671;725</Position>
                       <StyleLien>2</StyleLien>
                       <PreAssertion>scoreJoueur</PreAssertion>
                       <PostAssertion>scoreJoueur</PostAssertion>
@@ -308,7 +314,7 @@ scoreJoueur</PreAssertion>
                       <DetailsVideVisible>1</DetailsVideVisible>
                       <Enfants>
                         <Action>
-                          <Position>1716;949</Position>
+                          <Position>1789;867</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -325,7 +331,7 @@ scoreJoueur</PreAssertion>
                   <Titre>Sinon</Titre>
                   <Enfants>
                     <Sortie>
-                      <Position>2580;838</Position>
+                      <Position>2653;759</Position>
                     </Sortie>
                   </Enfants>
                 </operation>

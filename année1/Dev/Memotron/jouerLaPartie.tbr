@@ -2,7 +2,7 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>jouerLaPartie</nom>
-  <date_creation>25/10/2022 06:17</date_creation>
+  <date_creation>25/10/2022 07:10</date_creation>
   <Elements>
     <Action>
       <Position>377;279</Position>
@@ -144,7 +144,7 @@ debugModeActif</PreAssertion>
               </Enfants>
             </Action>
             <Action>
-              <Position>-814;584</Position>
+              <Position>-813;584</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>tailleCarre</PreAssertion>
               <PostAssertion>chiffrePairs,centreDuCarre

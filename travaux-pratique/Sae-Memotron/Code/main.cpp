@@ -88,7 +88,7 @@ int main(void)
             cout << "3/ Activer le mode debug" << endl;
         }
 
-        // afficherJouer >> ecran
+        // >> afficherJouer >> ecran
         cout << "4/ Jouer" << endl
              << endl;
 
@@ -97,14 +97,14 @@ int main(void)
         {
             afficherTexteEnCouleur("Veuillez enter un chiffre entre 1 et 4 !", rouge, true);
             erreurSaisie = false;
-        } // le message d'erreur est mit avant la saisie du l'utilisateur
+        } // le message d'erreur est mit avant la saisie de l'utilisateur
 
-        // saisieChoixJoueur >> choixJoueur ****************************************************************************************************
+        // clavier >> saisieChoixJoueur >> choixJoueur ****************************************************************************************************
         cout << "Votre choix : ";
         cin >> choixJoueur;
         effacer();
 
-        // choixJoueur >> traiterChoixJoueur >> tailleCarre, tempMemorisation, debugModeActif, erreurSaisie*************************************
+        // tailleCarre, tempMemorisation, debugModeActif, choixJoueur >> traiterChoixJoueur >> tailleCarre, tempMemorisation, debugModeActif, erreurSaisie *************************************
         if (choixJoueur == 4)
         {
             break;
@@ -126,17 +126,17 @@ int main(void)
             debugModeActif = (debugModeActif) ? false : true;
             break;
 
-        // erreurSaisie >> mettreErreurDeSaisieAVrai >> erreurSaisie
+        // >> mettreErreurDeSaisieAVrai >> erreurSaisie
         default:
             erreurSaisie = true;
             break;
         }
     }
 
-    // tailleCarre, tempMemorisation, debugModeActif >> joueurLaPartie >> scoreJoueur, bonneReponse **********************************************
+    // scoreJoueur, tailleCarre, tempMemorisation, debugModeActif >> joueurLaPartie >> scoreJoueur, bonneReponse **********************************************
     do
     {
-        // tailleCarre >> initialiserLesVariableDeReponse >> chiffrePairs, chiffreImpairs, centreDuCarre, chiffrePlusPetit, chiffrePlusGrand
+        // tailleCarre >> initialiserLesVariableDeReponse >> chiffrePairs, chiffreImpairs, centreDuCarre, chiffrePlusPetit, chiffrePlusGrand, indiceCentreDuCarre
         chiffrePairs = 0;
         chiffreImpairs = 0;
         chiffrePlusGrand = 1; // initialiser au nombre le plus petit possible
@@ -153,7 +153,7 @@ int main(void)
             chiffreAleatoire = static_cast<unsigned short int>(random(1, 9));
             cout << chiffreAleatoire << " ";
 
-            // chiffrePairs, chiffreImpairs, centreDuCarre, chiffrePlusPetit, chiffrePlusGrand >> calculerQuestion >> chiffrePairs, chiffreImpairs, centreDuCarre, chiffrePlusPetit, chiffrePlusGrand
+            // chiffrePairs, chiffreImpairs, centreDuCarre, chiffrePlusPetit, chiffrePlusGrand, indiceCentreDuCarre >> calculerReponse >> chiffrePairs, chiffreImpairs, centreDuCarre, chiffrePlusPetit, chiffrePlusGrand
 
             // chiffreAleatoire, chiffrePairs, chiffreImpairs >> associerPairsImpairs >> chiffrePairs, chiffreImpairs
             chiffreAleatoire % 2 == 0 ? chiffrePairs++ : chiffreImpairs++;
@@ -204,7 +204,7 @@ int main(void)
             effacer();
         }
 
-        // chiffrePairs, chiffreImpairs, centreDuCarre, chiffrePlusPetit, chiffrePlusGrand, score >> genererQuestionEtTraiterReponse >> scoreJoueur ***************
+        // chiffrePairs, chiffreImpairs, centreDuCarre, chiffrePlusPetit, chiffrePlusGrand, score >> genererQuestionEtTraiterReponse >> scoreJoueur, bonneReponse
         // >> choisirUneQuestionAuHazard >> numQuestionAleatoire
         numQuestionAleatoire = static_cast<unsigned short int>(random(1, 5));
 
@@ -212,27 +212,27 @@ int main(void)
         switch (numQuestionAleatoire)
         {
         case 1:
-            // Question 1
+            // centreDuCarre,bonneReponse >> Question 1 >> bonneReponse
             cout << "Quel etait le chiffre au centre du carre ? ";
             bonneReponse = centreDuCarre;
             break;
         case 2:
-            // Question 2
+            // chiffrePlusGrand,bonneReponse >> Question 2 >> bonneReponse
             cout << "Quel etait le chiffre le plus grand present dans le carre ? ";
             bonneReponse = chiffrePlusGrand;
             break;
         case 3:
-            // Question 3
+            // chiffrePlusPetit,bonneReponse >> Question 3 >> bonneReponse
             cout << "Quel etait le chiffre le plus petit present dans le carre ? ";
             bonneReponse = chiffrePlusPetit;
             break;
         case 4:
-            // Question 4
+            // chiffrePairs,bonneReponse >> Question 4 >> bonneReponse
             cout << "Combien y avait-il de chiffres pairs dans le carre ? ";
             bonneReponse = chiffrePairs;
             break;
         case 5:
-            // Question 5
+            // chiffreImpairs,bonneReponse >> Question 5 >> bonneReponse
             cout << "Combien y avait-il de chiffres impairs dans le carre ? ";
             bonneReponse = chiffreImpairs;
             break;
