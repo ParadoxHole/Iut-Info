@@ -1,21 +1,19 @@
 <?xml version="1.0"?>
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
-  <nom>afficherCarre</nom>
-  <date_creation>21/10/2022 00:06</date_creation>
+  <nom>afficherCarreEtAssignerResultat</nom>
+  <date_creation>24/10/2022 01:12</date_creation>
   <Elements>
     <Action>
-      <Position>440;217</Position>
+      <Position>410;232</Position>
       <StyleLien>2</StyleLien>
-      <PreAssertion>chiffrePair,chiffreImpair,
-centreDuCarre,
-chiffrePLusPetit,
-chiffrePlusGrand,tailleCarre</PreAssertion>
+      <PreAssertion>tailleCarre,
+indiceCentreDuCarre</PreAssertion>
       <PostAssertion>chiffrePair,chiffreImpair,
 centreDuCarre,
 chiffrePLusPetit,
 chiffrePlusGrand</PostAssertion>
-      <Titre>afficherCarre</Titre>
+      <Titre>afficherCarreEtAssignerResultat</Titre>
       <DetailsVisible>1</DetailsVisible>
       <DetailsVideVisible>1</DetailsVideVisible>
       <Enfants>
@@ -41,19 +39,19 @@ chiffrePlusGrand</PostAssertion>
               <DetailsVideVisible>1</DetailsVideVisible>
               <Enfants>
                 <Action>
-                  <Position>-289;770</Position>
+                  <Position>-308;768</Position>
                   <StyleLien>2</StyleLien>
                   <PreAssertion>chiffreAleatoire,
 chiffrePairs,
 chiffreImpairs</PreAssertion>
                   <PostAssertion>chiffrePairs,
 chiffreImpairs</PostAssertion>
-                  <Titre>associerPairImpair</Titre>
+                  <Titre>associerPairsImpairs</Titre>
                   <DetailsVisible>1</DetailsVisible>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants>
                     <Condition>
-                      <Position>-168;908</Position>
+                      <Position>-177;908</Position>
                       <StyleLien>0</StyleLien>
                       <estUnique>0</estUnique>
                       <operationsLogiques>
@@ -61,11 +59,11 @@ chiffreImpairs</PostAssertion>
                           <Titre>chiffreAleatoire%2=0</Titre>
                           <Enfants>
                             <Action>
-                              <Position>-177;1032</Position>
+                              <Position>-289;1029</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>?</PostAssertion>
-                              <Titre>chiffrePairs+=1</Titre>
+                              <Titre>chiffrePairs ← chiffrePairs +1</Titre>
                               <DetailsVisible>0</DetailsVisible>
                               <DetailsVideVisible>1</DetailsVideVisible>
                               <Enfants/>
@@ -76,11 +74,11 @@ chiffreImpairs</PostAssertion>
                           <Titre>Sinon</Titre>
                           <Enfants>
                             <Action>
-                              <Position>14;1034</Position>
+                              <Position>6;1030</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>?</PostAssertion>
-                              <Titre>chiffreImpairs+=1</Titre>
+                              <Titre>chiffreImpairs ← chiffreImpairs +1</Titre>
                               <DetailsVisible>0</DetailsVisible>
                               <DetailsVideVisible>1</DetailsVideVisible>
                               <Enfants/>
@@ -94,24 +92,23 @@ chiffreImpairs</PostAssertion>
                 <Action>
                   <Position>275;769</Position>
                   <StyleLien>2</StyleLien>
-                  <PreAssertion>i,tailleCarre,
-chiffreAleatoire,
-centreDuCarre</PreAssertion>
+                  <PreAssertion>i, chiffreAleatoire,
+indiceCentreDuCarre,</PreAssertion>
                   <PostAssertion>centreDuCarre</PostAssertion>
                   <Titre>trouverChiffreAuCentre</Titre>
                   <DetailsVisible>1</DetailsVisible>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants>
                     <Condition>
-                      <Position>429;909</Position>
+                      <Position>488;910</Position>
                       <StyleLien>0</StyleLien>
                       <estUnique>0</estUnique>
                       <operationsLogiques>
                         <operation>
-                          <Titre>i = roundUp(tailleCarre²/2)</Titre>
+                          <Titre>i = indiceCentreDuCarre</Titre>
                           <Enfants>
                             <Action>
-                              <Position>414;1030</Position>
+                              <Position>459;1028</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>?</PostAssertion>
@@ -127,7 +124,7 @@ centreDuCarre</PreAssertion>
                   </Enfants>
                 </Action>
                 <Action>
-                  <Position>885;768</Position>
+                  <Position>933;769</Position>
                   <StyleLien>2</StyleLien>
                   <PreAssertion>chiffreAleatoire,
 chiffrePlusGrand</PreAssertion>
@@ -137,7 +134,7 @@ chiffrePlusGrand</PreAssertion>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants>
                     <Condition>
-                      <Position>1011;906</Position>
+                      <Position>1065;899</Position>
                       <StyleLien>1</StyleLien>
                       <estUnique>1</estUnique>
                       <operationsLogiques>
@@ -145,7 +142,7 @@ chiffrePlusGrand</PreAssertion>
                           <Titre>chiffrePlusGrand &lt; chiffreAleatoire</Titre>
                           <Enfants>
                             <Action>
-                              <Position>1019;1021</Position>
+                              <Position>1075;1022</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>∅</PreAssertion>
                               <PostAssertion>∅</PostAssertion>
@@ -165,7 +162,7 @@ chiffrePlusGrand</PreAssertion>
                   </Enfants>
                 </Action>
                 <Action>
-                  <Position>1611;776</Position>
+                  <Position>1659;777</Position>
                   <StyleLien>2</StyleLien>
                   <PreAssertion>chiffreAleatoire,
 chiffrePlusPetit</PreAssertion>
@@ -175,7 +172,7 @@ chiffrePlusPetit</PreAssertion>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants>
                     <Condition>
-                      <Position>1740;903</Position>
+                      <Position>1787;911</Position>
                       <StyleLien>1</StyleLien>
                       <estUnique>1</estUnique>
                       <operationsLogiques>
@@ -183,7 +180,7 @@ chiffrePlusPetit</PreAssertion>
                           <Titre>chiffrePlusPetit > chiffreAleatoire</Titre>
                           <Enfants>
                             <Action>
-                              <Position>1722;1007</Position>
+                              <Position>1791;1018</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>∅</PreAssertion>
                               <PostAssertion>∅</PostAssertion>
@@ -195,7 +192,7 @@ chiffrePlusPetit</PreAssertion>
                           </Enfants>
                         </operation>
                         <operation>
-                          <Titre>Sinon</Titre>
+                          <Titre>chiffrePlusGrand &lt; chiffreAleatoire</Titre>
                           <Enfants/>
                         </operation>
                       </operationsLogiques>
@@ -205,11 +202,11 @@ chiffrePlusPetit</PreAssertion>
               </Enfants>
             </Action>
             <Action>
-              <Position>-551;479</Position>
+              <Position>-613;482</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>?</PreAssertion>
               <PostAssertion>chiffreAleatoire</PostAssertion>
-              <Titre>afficherChiffreMemotron</Titre>
+              <Titre>genererEtAfficherChiffreMemotron</Titre>
               <DetailsVisible>1</DetailsVisible>
               <DetailsVideVisible>0</DetailsVideVisible>
               <Enfants>
@@ -236,7 +233,7 @@ chiffrePlusPetit</PreAssertion>
               </Enfants>
             </Action>
             <Action>
-              <Position>2204;492</Position>
+              <Position>2200;491</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>i,
 tailleCarre</PreAssertion>
@@ -246,15 +243,15 @@ tailleCarre</PreAssertion>
               <DetailsVideVisible>0</DetailsVideVisible>
               <Enfants>
                 <Condition>
-                  <Position>2309;634</Position>
-                  <StyleLien>1</StyleLien>
-                  <estUnique>1</estUnique>
+                  <Position>2311;620</Position>
+                  <StyleLien>0</StyleLien>
+                  <estUnique>0</estUnique>
                   <operationsLogiques>
                     <operation>
                       <Titre>i % tailleCarre = 0</Titre>
                       <Enfants>
                         <Action>
-                          <Position>2291;750</Position>
+                          <Position>2334;738</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>∅</PreAssertion>
                           <PostAssertion>∅</PostAssertion>
@@ -264,10 +261,6 @@ tailleCarre</PreAssertion>
                           <Enfants/>
                         </Action>
                       </Enfants>
-                    </operation>
-                    <operation>
-                      <Titre>Sinon</Titre>
-                      <Enfants/>
                     </operation>
                   </operationsLogiques>
                 </Condition>

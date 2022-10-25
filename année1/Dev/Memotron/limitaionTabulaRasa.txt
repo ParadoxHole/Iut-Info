@@ -1,4 +1,6 @@
 lancerLeCompteARebour,
 		boucleItérative tempMemo = TempMemorisation			
 	
+gererQuestionEtReponse,
+	output bonneReponse
 

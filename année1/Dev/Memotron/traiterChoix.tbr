@@ -2,7 +2,7 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>traiterChoix</nom>
-  <date_creation>19/10/2022 23:19</date_creation>
+  <date_creation>24/10/2022 02:29</date_creation>
   <Elements>
     <Action>
       <Position>655;442</Position>
@@ -193,14 +193,14 @@ erreurDeSaisie</PostAssertion>
                 <Action>
                   <Position>1551;861</Position>
                   <StyleLien>2</StyleLien>
-                  <PreAssertion>erreurDeSaisie</PreAssertion>
+                  <PreAssertion>?</PreAssertion>
                   <PostAssertion>erreurDeSaisie</PostAssertion>
                   <Titre>mettreErreurDeSaisieAVrai</Titre>
                   <DetailsVisible>1</DetailsVisible>
-                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
                   <Enfants>
                     <Action>
-                      <Position>1749;1007</Position>
+                      <Position>1574;984</Position>
                       <StyleLien>1</StyleLien>
                       <PreAssertion>∅</PreAssertion>
                       <PostAssertion>∅</PostAssertion>

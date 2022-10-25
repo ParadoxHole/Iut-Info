@@ -2,7 +2,7 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>jouerLaPartie</nom>
-  <date_creation>20/10/2022 23:28</date_creation>
+  <date_creation>25/10/2022 06:17</date_creation>
   <Elements>
     <Action>
       <Position>377;279</Position>
@@ -23,17 +23,15 @@ bonneReponse</PostAssertion>
           <IterationFixe>0</IterationFixe>
           <Enfants>
             <Action>
-              <Position>236;586</Position>
+              <Position>192;587</Position>
               <StyleLien>1</StyleLien>
-              <PreAssertion>chiffrePair,chiffreImpair,
-centreDuCarre,
-chiffrePLusPetit,
-chiffrePlusGrand,tailleCarre</PreAssertion>
-              <PostAssertion>chiffrePair, chiffreImpair,
+              <PreAssertion>tailleCarre,
+indiceCentreDuCarre</PreAssertion>
+              <PostAssertion>chiffrePairs, chiffreImpairs,
 centreDuCarre,
 chiffrePLusPetit,
 chiffrePlusGrand</PostAssertion>
-              <Titre>afficherCarre</Titre>
+              <Titre>afficherCarreEtAssignerResultat</Titre>
               <DetailsVisible>1</DetailsVisible>
               <DetailsVideVisible>1</DetailsVideVisible>
               <Enfants/>
@@ -41,13 +39,13 @@ chiffrePlusGrand</PostAssertion>
             <Action>
               <Position>1913;578</Position>
               <StyleLien>1</StyleLien>
-              <PreAssertion>chiffrePair,chiffreImpair,
+              <PreAssertion>chiffrePairs,chiffreImpairs,
 chiffrePLusPetit,
 chiffrePlusGrand,
 centreDuCarre,scoreJoueur</PreAssertion>
               <PostAssertion>scoreJoueur,
 bonneReponse</PostAssertion>
-              <Titre>gererQuestion</Titre>
+              <Titre>genererQuestionEtTraiterReponse</Titre>
               <DetailsVisible>1</DetailsVisible>
               <DetailsVideVisible>1</DetailsVideVisible>
               <Enfants/>
@@ -63,12 +61,12 @@ debugModeActif</PreAssertion>
               <DetailsVideVisible>0</DetailsVideVisible>
               <Enfants>
                 <Condition>
-                  <Position>1647;727</Position>
+                  <Position>1612;715</Position>
                   <StyleLien>1</StyleLien>
-                  <estUnique>1</estUnique>
+                  <estUnique>0</estUnique>
                   <operationsLogiques>
                     <operation>
-                      <Titre>debugModeActif</Titre>
+                      <Titre>debugModeActif = false</Titre>
                       <Enfants>
                         <Action>
                           <Position>1377;855</Position>
@@ -76,16 +74,6 @@ debugModeActif</PreAssertion>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
                           <Titre>Afficher: "Compte à rebours: "</Titre>
-                          <DetailsVisible>1</DetailsVisible>
-                          <DetailsVideVisible>0</DetailsVideVisible>
-                          <Enfants/>
-                        </Action>
-                        <Action>
-                          <Position>1978;853</Position>
-                          <StyleLien>1</StyleLien>
-                          <PreAssertion>?</PreAssertion>
-                          <PostAssertion>?</PostAssertion>
-                          <Titre>Effacer le terminal</Titre>
                           <DetailsVisible>1</DetailsVisible>
                           <DetailsVideVisible>0</DetailsVideVisible>
                           <Enfants/>
@@ -118,18 +106,24 @@ debugModeActif</PreAssertion>
                             </Action>
                           </Enfants>
                         </Iteration>
+                        <Action>
+                          <Position>1978;853</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>?</PreAssertion>
+                          <PostAssertion>?</PostAssertion>
+                          <Titre>Effacer le terminal</Titre>
+                          <DetailsVisible>1</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
                       </Enfants>
-                    </operation>
-                    <operation>
-                      <Titre>Sinon</Titre>
-                      <Enfants/>
                     </operation>
                   </operationsLogiques>
                 </Condition>
               </Enfants>
             </Action>
             <Action>
-              <Position>976;586</Position>
+              <Position>1033;588</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>scoreJoueur</PreAssertion>
               <PostAssertion>?</PostAssertion>
@@ -138,11 +132,11 @@ debugModeActif</PreAssertion>
               <DetailsVideVisible>0</DetailsVideVisible>
               <Enfants>
                 <Action>
-                  <Position>1048;727</Position>
+                  <Position>1105;729</Position>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>∅</PreAssertion>
                   <PostAssertion>∅</PostAssertion>
-                  <Titre>Afficher: "Votre score actuel : ",score</Titre>
+                  <Titre>Afficher: "Votre score actuel : " score</Titre>
                   <DetailsVisible>0</DetailsVisible>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants/>
@@ -150,19 +144,19 @@ debugModeActif</PreAssertion>
               </Enfants>
             </Action>
             <Action>
-              <Position>-779;584</Position>
+              <Position>-814;584</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>tailleCarre</PreAssertion>
-              <PostAssertion>chiffrePair, chiffreImpair,
-centreDuCarre,chiffrePLusPetit,
-chiffrePlusGrand,
+              <PostAssertion>chiffrePairs,centreDuCarre
+chiffreImpairs,chiffrePlusPetit,
+chiffrePLusGrand,
 indiceDuCentreDuCarre</PostAssertion>
               <Titre>initialiserLesVariableDeReponse</Titre>
               <DetailsVisible>1</DetailsVisible>
               <DetailsVideVisible>1</DetailsVideVisible>
               <Enfants>
                 <Action>
-                  <Position>-800;721</Position>
+                  <Position>-833;720</Position>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>∅</PreAssertion>
                   <PostAssertion>∅</PostAssertion>
@@ -173,7 +167,7 @@ chiffreImpairs ← 0</Titre>
                   <Enfants/>
                 </Action>
                 <Action>
-                  <Position>-607;719</Position>
+                  <Position>-642;719</Position>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>∅</PreAssertion>
                   <PostAssertion>∅</PostAssertion>
@@ -184,30 +178,19 @@ chiffrePlusGrand ← 9</Titre>
                   <Enfants/>
                 </Action>
                 <Action>
-                  <Position>-394;719</Position>
-                  <StyleLien>2</StyleLien>
+                  <Position>-427;718</Position>
+                  <StyleLien>1</StyleLien>
                   <PreAssertion>∅</PreAssertion>
                   <PostAssertion>∅</PostAssertion>
-                  <Titre>calculerIndiceDuCentreDuCarre</Titre>
+                  <Titre>indiceDuCentreDuCarre ← (tailleCarre²+1)/2</Titre>
                   <DetailsVisible>0</DetailsVisible>
-                  <DetailsVideVisible>0</DetailsVideVisible>
-                  <Enfants>
-                    <Action>
-                      <Position>-449;837</Position>
-                      <StyleLien>1</StyleLien>
-                      <PreAssertion>∅</PreAssertion>
-                      <PostAssertion>∅</PostAssertion>
-                      <Titre>indiceDuCentreDuCarre ← (tailleCarre²+1)/2</Titre>
-                      <DetailsVisible>0</DetailsVisible>
-                      <DetailsVideVisible>1</DetailsVideVisible>
-                      <Enfants/>
-                    </Action>
-                  </Enfants>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
                 </Action>
               </Enfants>
             </Action>
             <Action>
-              <Position>-9;589</Position>
+              <Position>-23;587</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>∅</PreAssertion>
               <PostAssertion>∅</PostAssertion>
@@ -216,7 +199,7 @@ chiffrePlusGrand ← 9</Titre>
               <DetailsVideVisible>1</DetailsVideVisible>
               <Enfants>
                 <Action>
-                  <Position>-51;710</Position>
+                  <Position>-67;857</Position>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>?</PreAssertion>
                   <PostAssertion>?</PostAssertion>

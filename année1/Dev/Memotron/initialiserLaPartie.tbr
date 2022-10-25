@@ -2,7 +2,7 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>initialiserLaPartie</nom>
-  <date_creation>22/10/2022 14:46</date_creation>
+  <date_creation>24/10/2022 01:41</date_creation>
   <Elements>
     <Action>
       <Position>675;492</Position>
@@ -28,7 +28,7 @@ erreurDeSaisie</PostAssertion>
           <DetailsVideVisible>0</DetailsVideVisible>
           <Enfants>
             <Action>
-              <Position>311;827</Position>
+              <Position>343;834</Position>
               <StyleLien>1</StyleLien>
               <PreAssertion>∅</PreAssertion>
               <PostAssertion>∅</PostAssertion>
@@ -38,7 +38,7 @@ erreurDeSaisie</PostAssertion>
               <Enfants/>
             </Action>
             <Action>
-              <Position>120;836</Position>
+              <Position>105;834</Position>
               <StyleLien>1</StyleLien>
               <PreAssertion>∅</PreAssertion>
               <PostAssertion>∅</PostAssertion>
@@ -58,7 +58,7 @@ erreurDeSaisie</PostAssertion>
               <Enfants/>
             </Action>
             <Action>
-              <Position>547;828</Position>
+              <Position>577;834</Position>
               <StyleLien>1</StyleLien>
               <PreAssertion>∅</PreAssertion>
               <PostAssertion>∅</PostAssertion>
@@ -68,7 +68,7 @@ erreurDeSaisie</PostAssertion>
               <Enfants/>
             </Action>
             <Action>
-              <Position>-209;835</Position>
+              <Position>-220;835</Position>
               <StyleLien>1</StyleLien>
               <PreAssertion>∅</PreAssertion>
               <PostAssertion>∅</PostAssertion>
@@ -80,7 +80,7 @@ erreurDeSaisie</PostAssertion>
           </Enfants>
         </Action>
         <Action>
-          <Position>1108;760</Position>
+          <Position>1002;749</Position>
           <StyleLien>2</StyleLien>
           <PreAssertion>tailleCarre,
 tempMemorisation,
@@ -88,7 +88,7 @@ debugModeActif,
 erreurDeSaisie</PreAssertion>
           <PostAssertion>tailleCarre,
 tempMemorisation,
-debugMode,</PostAssertion>
+debugMode</PostAssertion>
           <Titre>parametrageMenuDemarrer</Titre>
           <DetailsVisible>1</DetailsVisible>
           <DetailsVideVisible>1</DetailsVideVisible>
@@ -143,7 +143,7 @@ erreurDeSaisie</PreAssertion>
                   </Enfants>
                 </Action>
                 <Action>
-                  <Position>1671;1047</Position>
+                  <Position>1673;1046</Position>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>choixJoueur</PreAssertion>
                   <PostAssertion>tailleCarre,debugModeActif,
