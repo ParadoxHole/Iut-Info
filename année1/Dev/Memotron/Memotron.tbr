@@ -2,10 +2,10 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>Memotron</nom>
-  <date_creation>5/10/2022 22:37</date_creation>
+  <date_creation>25/10/2022 07:08</date_creation>
   <Elements>
     <Action>
-      <Position>808;437</Position>
+      <Position>894;440</Position>
       <StyleLien>2</StyleLien>
       <PreAssertion>?</PreAssertion>
       <PostAssertion>?</PostAssertion>
@@ -14,10 +14,10 @@
       <DetailsVideVisible>0</DetailsVideVisible>
       <Enfants>
         <Action>
-          <Position>-491;616</Position>
+          <Position>60;606</Position>
           <StyleLien>1</StyleLien>
           <PreAssertion>?</PreAssertion>
-          <PostAssertion>tailleCarre,
+          <PostAssertion>scoreJoueur, tailleCarre,
 tempMemorisation,
 debugModeActif</PostAssertion>
           <Titre>initialiserLaPartie</Titre>
@@ -26,173 +26,40 @@ debugModeActif</PostAssertion>
           <Enfants/>
         </Action>
         <Action>
-          <Position>575;610</Position>
-          <StyleLien>2</StyleLien>
-          <PreAssertion>tailleCarre,
+          <Position>620;608</Position>
+          <StyleLien>1</StyleLien>
+          <PreAssertion>scoreJoueur, tailleCarre,
 tempMemorisation,
 debugModeActif</PreAssertion>
-          <PostAssertion>?</PostAssertion>
+          <PostAssertion>scoreJoueur,
+bonneReponse</PostAssertion>
           <Titre>jouerLaPartie</Titre>
           <DetailsVisible>1</DetailsVisible>
-          <DetailsVideVisible>0</DetailsVideVisible>
-          <Enfants>
-            <Iteration>
-              <Position>846.5;761.5</Position>
-              <StyleLien>1</StyleLien>
-              <Titre>?</Titre>
-              <IterationFixe>0</IterationFixe>
-              <Enfants>
-                <Action>
-                  <Position>-278;955</Position>
-                  <StyleLien>1</StyleLien>
-                  <PreAssertion>tailleCarre</PreAssertion>
-                  <PostAssertion>chiffrePair, chiffreImpair,
-centreDuCarre,
-chiffrePLusPetit,
-chiffrePlusGrand</PostAssertion>
-                  <Titre>afficherCarre</Titre>
-                  <DetailsVisible>1</DetailsVisible>
-                  <DetailsVideVisible>1</DetailsVideVisible>
-                  <Enfants/>
-                </Action>
-                <Action>
-                  <Position>1217;951</Position>
-                  <StyleLien>1</StyleLien>
-                  <PreAssertion>chiffrePair, chiffreImpair,
-centreDuCarre,
-chiffrePLusPetit,
-chiffrePlusGrand, score</PreAssertion>
-                  <PostAssertion>scoreJoueur</PostAssertion>
-                  <Titre>gererQuestion</Titre>
-                  <DetailsVisible>1</DetailsVisible>
-                  <DetailsVideVisible>1</DetailsVideVisible>
-                  <Enfants/>
-                </Action>
-                <Action>
-                  <Position>704;953</Position>
-                  <StyleLien>2</StyleLien>
-                  <PreAssertion>tempMemorisation</PreAssertion>
-                  <PostAssertion>?</PostAssertion>
-                  <Titre>lancerLeCompteARebour</Titre>
-                  <DetailsVisible>1</DetailsVisible>
-                  <DetailsVideVisible>0</DetailsVideVisible>
-                  <Enfants>
-                    <Condition>
-                      <Position>908;1080</Position>
-                      <StyleLien>1</StyleLien>
-                      <estUnique>1</estUnique>
-                      <operationsLogiques>
-                        <operation>
-                          <Titre>debugModeActif = faux</Titre>
-                          <Enfants>
-                            <Action>
-                              <Position>672;1230</Position>
-                              <StyleLien>1</StyleLien>
-                              <PreAssertion>?</PreAssertion>
-                              <PostAssertion>?</PostAssertion>
-                              <Titre>Afficher: "Compte à rebours: "</Titre>
-                              <DetailsVisible>1</DetailsVisible>
-                              <DetailsVideVisible>0</DetailsVideVisible>
-                              <Enfants/>
-                            </Action>
-                            <Action>
-                              <Position>1220;1227</Position>
-                              <StyleLien>1</StyleLien>
-                              <PreAssertion>?</PreAssertion>
-                              <PostAssertion>?</PostAssertion>
-                              <Titre>Effacer le terminal</Titre>
-                              <DetailsVisible>1</DetailsVisible>
-                              <DetailsVideVisible>0</DetailsVideVisible>
-                              <Enfants/>
-                            </Action>
-                            <Iteration>
-                              <Position>1014.5;1255.5</Position>
-                              <StyleLien>1</StyleLien>
-                              <Titre>Pour i de tempMemo à 0</Titre>
-                              <IterationFixe>1</IterationFixe>
-                              <Enfants>
-                                <Action>
-                                  <Position>916;1350</Position>
-                                  <StyleLien>1</StyleLien>
-                                  <PreAssertion>?</PreAssertion>
-                                  <PostAssertion>?</PostAssertion>
-                                  <Titre>Afficher: i</Titre>
-                                  <DetailsVisible>1</DetailsVisible>
-                                  <DetailsVideVisible>0</DetailsVideVisible>
-                                  <Enfants/>
-                                </Action>
-                                <Action>
-                                  <Position>1031;1350</Position>
-                                  <StyleLien>1</StyleLien>
-                                  <PreAssertion>∅</PreAssertion>
-                                  <PostAssertion>∅</PostAssertion>
-                                  <Titre>attendre1Seconde</Titre>
-                                  <DetailsVisible>0</DetailsVisible>
-                                  <DetailsVideVisible>1</DetailsVideVisible>
-                                  <Enfants/>
-                                </Action>
-                              </Enfants>
-                            </Iteration>
-                          </Enfants>
-                        </operation>
-                        <operation>
-                          <Titre>?</Titre>
-                          <Enfants/>
-                        </operation>
-                        <operation>
-                          <Titre>Sinon</Titre>
-                          <Enfants/>
-                        </operation>
-                      </operationsLogiques>
-                    </Condition>
-                  </Enfants>
-                </Action>
-                <Action>
-                  <Position>310;957</Position>
-                  <StyleLien>2</StyleLien>
-                  <PreAssertion>scoreJoueur</PreAssertion>
-                  <PostAssertion>?</PostAssertion>
-                  <Titre>afficherScoreActuel</Titre>
-                  <DetailsVisible>1</DetailsVisible>
-                  <DetailsVideVisible>0</DetailsVideVisible>
-                  <Enfants>
-                    <Action>
-                      <Position>382;1097</Position>
-                      <StyleLien>1</StyleLien>
-                      <PreAssertion>∅</PreAssertion>
-                      <PostAssertion>∅</PostAssertion>
-                      <Titre>Afficher: "Votre score actuel : ",score</Titre>
-                      <DetailsVisible>0</DetailsVisible>
-                      <DetailsVideVisible>1</DetailsVideVisible>
-                      <Enfants/>
-                    </Action>
-                  </Enfants>
-                </Action>
-              </Enfants>
-            </Iteration>
-          </Enfants>
+          <DetailsVideVisible>1</DetailsVideVisible>
+          <Enfants/>
         </Action>
         <Action>
-          <Position>2009;625</Position>
+          <Position>1356;606</Position>
           <StyleLien>2</StyleLien>
-          <PreAssertion>scoreJoueur</PreAssertion>
+          <PreAssertion>scoreJoueur,
+bonneReponse</PreAssertion>
           <PostAssertion>?</PostAssertion>
           <Titre>finaliserLaPartie</Titre>
           <DetailsVisible>1</DetailsVisible>
           <DetailsVideVisible>0</DetailsVideVisible>
           <Enfants>
             <Action>
-              <Position>2322;794</Position>
+              <Position>1638;743</Position>
               <StyleLien>1</StyleLien>
               <PreAssertion>∅</PreAssertion>
               <PostAssertion>∅</PostAssertion>
-              <Titre>Afficher: "Votre score final est", score</Titre>
+              <Titre>Afficher: "Votre score final est", scoreJoueur</Titre>
               <DetailsVisible>0</DetailsVisible>
               <DetailsVideVisible>1</DetailsVideVisible>
               <Enfants/>
             </Action>
             <Action>
-              <Position>1779;798</Position>
+              <Position>1185;741</Position>
               <StyleLien>1</StyleLien>
               <PreAssertion>∅</PreAssertion>
               <PostAssertion>∅</PostAssertion>

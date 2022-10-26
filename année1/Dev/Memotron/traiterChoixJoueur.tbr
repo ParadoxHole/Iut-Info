@@ -2,21 +2,23 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>traiterChoix</nom>
-  <date_creation>5/10/2022 22:59</date_creation>
+  <date_creation>25/10/2022 07:12</date_creation>
   <Elements>
     <Action>
-      <Position>688;439</Position>
+      <Position>511;449</Position>
       <StyleLien>2</StyleLien>
-      <PreAssertion>choixJoueur</PreAssertion>
+      <PreAssertion>tailleCarre,debugMode,
+tempMemorisation,
+choixJoueur</PreAssertion>
       <PostAssertion>tailleCarre,debugMode,
 tempMemorisation,
 erreurDeSaisie</PostAssertion>
-      <Titre>traiterChoix</Titre>
+      <Titre>traiterChoixJoueur</Titre>
       <DetailsVisible>1</DetailsVisible>
       <DetailsVideVisible>1</DetailsVideVisible>
       <Enfants>
         <ConditionMultiple>
-          <Position>785;584</Position>
+          <Position>740;581</Position>
           <StyleLien>0</StyleLien>
           <Titre>choixJoueur</Titre>
           <operationsLogiques>
@@ -33,7 +35,7 @@ erreurDeSaisie</PostAssertion>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants>
                     <Condition>
-                      <Position>-154;977</Position>
+                      <Position>-154;983</Position>
                       <StyleLien>0</StyleLien>
                       <estUnique>0</estUnique>
                       <operationsLogiques>
@@ -41,7 +43,7 @@ erreurDeSaisie</PostAssertion>
                           <Titre>tailleCarre = 3</Titre>
                           <Enfants>
                             <Action>
-                              <Position>-186;1110</Position>
+                              <Position>-187;1111</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>temp</PostAssertion>
@@ -56,7 +58,7 @@ erreurDeSaisie</PostAssertion>
                           <Titre>sinon</Titre>
                           <Enfants>
                             <Action>
-                              <Position>-14;1110</Position>
+                              <Position>-15;1111</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>temp</PostAssertion>
@@ -86,7 +88,7 @@ erreurDeSaisie</PostAssertion>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants>
                     <Condition>
-                      <Position>326;989</Position>
+                      <Position>322;985</Position>
                       <StyleLien>0</StyleLien>
                       <estUnique>0</estUnique>
                       <operationsLogiques>
@@ -94,7 +96,7 @@ erreurDeSaisie</PostAssertion>
                           <Titre>tempMemorisation = 10</Titre>
                           <Enfants>
                             <Action>
-                              <Position>289;1112</Position>
+                              <Position>271;1116</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>temp</PostAssertion>
@@ -109,7 +111,7 @@ erreurDeSaisie</PostAssertion>
                           <Titre>sinon</Titre>
                           <Enfants>
                             <Action>
-                              <Position>544;1111</Position>
+                              <Position>526;1115</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>temp</PostAssertion>
@@ -139,7 +141,7 @@ erreurDeSaisie</PostAssertion>
                   <DetailsVideVisible>1</DetailsVideVisible>
                   <Enfants>
                     <Condition>
-                      <Position>935;980</Position>
+                      <Position>934;991</Position>
                       <StyleLien>0</StyleLien>
                       <estUnique>0</estUnique>
                       <operationsLogiques>
@@ -147,7 +149,7 @@ erreurDeSaisie</PostAssertion>
                           <Titre>debugModeActif = faux</Titre>
                           <Enfants>
                             <Action>
-                              <Position>867;1112</Position>
+                              <Position>859;1115</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>debug</PostAssertion>
@@ -162,7 +164,7 @@ erreurDeSaisie</PostAssertion>
                           <Titre>sinon</Titre>
                           <Enfants>
                             <Action>
-                              <Position>1109;1112</Position>
+                              <Position>1101;1115</Position>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>debug</PostAssertion>
@@ -193,14 +195,14 @@ erreurDeSaisie</PostAssertion>
                 <Action>
                   <Position>1551;861</Position>
                   <StyleLien>2</StyleLien>
-                  <PreAssertion>erreurDeSaisie</PreAssertion>
+                  <PreAssertion>?</PreAssertion>
                   <PostAssertion>erreurDeSaisie</PostAssertion>
                   <Titre>mettreErreurDeSaisieAVrai</Titre>
                   <DetailsVisible>1</DetailsVisible>
-                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
                   <Enfants>
                     <Action>
-                      <Position>1749;1007</Position>
+                      <Position>1572;989</Position>
                       <StyleLien>1</StyleLien>
                       <PreAssertion>∅</PreAssertion>
                       <PostAssertion>∅</PostAssertion>
