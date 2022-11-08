@@ -24,7 +24,7 @@ int main (void)
     cout << "Renseignez le jour";
     cin >> date1.jour;
     cout << "Renseignez le mois";
-    cin >> date1.mois;
+
     cout << "Renseignez le annee";
     cin >> date1.annee;
 
