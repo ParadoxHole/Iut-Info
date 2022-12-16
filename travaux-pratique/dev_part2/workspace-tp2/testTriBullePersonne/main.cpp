@@ -69,7 +69,7 @@ void testTriBulle_personnes()
     afficher (tableau1, TAILLE);
 
     // monTab1, TAILLE >> triBulle >> monTab
-    /**A COMPLETER-2 **/
+    triBulle(tableau1, TAILLE);
     
     // afficher monTab après le tri
     cout << "Apres tri BULLE croissant, tableau = " ;
@@ -106,9 +106,20 @@ void afficher(const Personne tab[],
 /*-----------------------------------*/
 /* Corps des sous-programmes à tester 
 -------------------------------------*/
-void   triBulle (Personne tab[],
-                 unsigned int nbTab)
+void   triBulle (Personne tab[], unsigned int nbTab)
 {
-    /**A COMPLETER-1 **/
+    int i, j; 
+    Personne temp;
+    for (i = 0; i < nbTab; i++)
+    {
+        for (j = 0; j < nbTab - 1; j++)
+        {
+            if (tab[j].nom > tab[j + 1].nom)
+            {
+                temp.nom = tab[j].nom;
+                tab[j].nom = tab[j + 1].nom;
+                tab[j + 1].nom = temp.nom;
+            }
+        }
+    }
 }
-

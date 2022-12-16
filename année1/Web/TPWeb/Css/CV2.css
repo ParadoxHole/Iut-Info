@@ -1,0 +1,9 @@
+header, footer, nav, section{
+    background-color: white;
+    color: black;   
+}
+
+aside{
+    background-color: rgb(67, 82, 113);
+    color: white;
+}

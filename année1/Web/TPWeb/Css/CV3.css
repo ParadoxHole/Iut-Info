@@ -1,0 +1,26 @@
+header, footer, nav, section{
+    background-color: white;
+    color: black;   
+}
+
+aside{
+    background-color: rgb(67, 82, 113);
+    color: white;
+}
+
+.dates{
+    color: rgb(67, 82, 113);
+}
+
+#pp{
+    height: 100px;
+    width: 100px;
+}
+#text{
+    color: black;
+}
+strong{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}

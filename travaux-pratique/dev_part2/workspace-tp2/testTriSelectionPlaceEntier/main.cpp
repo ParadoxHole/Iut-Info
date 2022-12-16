@@ -59,7 +59,7 @@ void testTriParSelectionDePlace_entiers()
     afficher (tableau1, TAILLE);
 
     // monTab1, TAILLE >> triBulle >> monTab
-    /**A COMPLETER-2 **/
+    triParSelectionDePlace(tableau1, TAILLE);
     
     // afficher monTab après le tri
     cout << "Apres tri par SELECTION de PLACE croissant, tableau = " ;
@@ -93,5 +93,18 @@ void afficher (const int tab[],
 void   triParSelectionDePlace (int tab[],
                              unsigned int nbTab)
 {
-    /**A COMPLETER-1 **/    
+    for (unsigned short int i = 0; i < nbTab-1; i++)
+    {
+        unsigned short int indiceMin = i;
+        for ( int j = i+1; j < nbTab; j++)
+        {
+            if (tab[indiceMin] > tab[j])
+            {
+                indiceMin = j;
+            }
+        }
+        int temp = tab[i];
+        tab[i] = tab[indiceMin];
+        tab[indiceMin] = temp;
+    }  
 }
