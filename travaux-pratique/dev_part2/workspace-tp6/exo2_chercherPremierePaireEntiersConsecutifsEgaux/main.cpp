@@ -59,5 +59,34 @@ void rangPaireValeursConsecutives (string nomSysteme,
                                    bool& trouve,
                                    unsigned int& rangVal1)
 {
+    // ouverture du fichier en lecture
+    UnFichierTexte fichierSource;
+    associer(fichierSource, nomSysteme);
+    ouvrir(fichierSource, consultation);
 
+    // initialisation des variables de travail
+    int valCourante, valPrecedente;
+    unsigned int rangCourant;
+    bool finFichier = false;
+    trouve = false;
+
+    // boucle de lecture des valeurs
+    while (!finFichier && !trouve)
+    {
+        // lecture de la valeur suivante
+        valPrecedente = valCourante;
+        lireMot(fichierSource, valCourante, finFichier);
+        
+        rangCourant++;
+
+        // test de la paire
+        if (valCourante == valPrecedente && valCourante == valCherchee)
+        {
+            trouve = true;
+            rangVal1 = rangCourant - 1;
+        }
+    }
+
+    // fermeture du fichier
+    fermer(fichierSource);
 }

@@ -1,0 +1,72 @@
+/********************************** footer *****************************************/
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #F8E9DA;
+    color: #55527C;
+}
+/*footer grid*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto-fit);
+    grid-template-areas: 
+    "logo socials socials ."
+    "links1 links1 links2 links2"
+}
+
+footer img {
+    height: 50px;
+}
+
+.footerlogo{
+    grid-area: logo;
+}
+
+/* display links */
+.links1{
+    grid-area: links1;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: 0 0 0 10px;
+}
+
+.links2{
+    grid-area: links2;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin: 0 10px 0 0;
+}
+
+.links1 a, .links2 a{
+    margin: 0px 8px 4px 0;
+    display: inline-block;
+}
+
+.links1 a:not(:last-child):after, .links2 a:not(:last-child):after {
+    content: " |";
+    padding-left: 10px;
+}
+
+/* display social media icons */
+.socials{ 
+    grid-area: socials;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.socials a{
+    margin: 0 10px;
+}
+
+footer a[href] {
+    color: inherit;
+    text-decoration: none;
+}
+/**********************************************************************************/

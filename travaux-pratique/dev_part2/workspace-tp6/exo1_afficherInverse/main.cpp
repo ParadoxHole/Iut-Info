@@ -29,7 +29,6 @@ int main()
     cout << "nom du fichier a afficher : ";
     cin >> nomSystemeficSource;
     afficherInverseFichierTexte(nomSystemeficSource);
-    cout << endl << endl;
 
     cout << endl <<  "...au revoir..." << endl;
     return 0;
@@ -56,4 +55,10 @@ void afficherInverseFichierTexte(string nomSysFic)
          if (fdf) break;
          empiler(p, ligne);
       }
+      while (!estVide(p))
+      {
+         depiler(p,ligne);
+         cout << ligne << endl;
+      }
+      fermer(fic);
 }

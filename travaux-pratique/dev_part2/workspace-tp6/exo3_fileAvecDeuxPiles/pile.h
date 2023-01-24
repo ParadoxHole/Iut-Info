@@ -29,7 +29,7 @@ using namespace std;
    typedef leTypeDefiniDansLeFichier UnElement;
 */
 
-typedef bool UnElement;
+typedef int UnElement;
 
 /* *************************************************** */
 
